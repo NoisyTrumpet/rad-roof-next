@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "radiant-roofing",
+  "private": false,
+  "description": "Radiant Roofing is a full service residential and commercial contractor. Radiant Roofing views a good roof as an investment in your home or business. In our area, your roof must withstand the heat, winds and severe weather conditions. A new roof will boost your property value, increase your curb appeal and can increase the efficiency of your heating and cooling systems.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@NoisyTrumpet <web.dev@noisytrumpet.com>",
   "dependencies": {
     "gatsby": "^3.11.1",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",
@@ -13,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",
     "gatsby-source-filesystem": "^3.11.0",
+    "gatsby-source-wordpress": "^5.11.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -37,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/NoisyTrumpet/radiant-roofing"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/NoisyTrumpet/radiant-roofing/issues"
   }
 }
