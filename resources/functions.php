@@ -90,3 +90,132 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+/**
+* ACF Options Page
+**/
+
+if (function_exists('acf_add_options_page')) {
+    $site_settings = acf_add_options_page([
+        'page_title' => 'Site Settings',
+        'menu_title' => 'Site Settings',
+        'menu_slug' => 'site-general-settings',
+        'capability' => 'administrator',
+        'redirect' => false,
+        'position' => 33
+    ]);
+
+    acf_add_options_sub_page([
+        'page_title' => __('Banner'),
+        'menu_title' => __('Banner'),
+        'parent_slug' => $site_settings['menu_slug']
+    ]);
+
+    acf_add_options_sub_page([
+        'page_title' => __('Header'),
+        'menu_title' => __('Header'),
+        'parent_slug' => $site_settings['menu_slug']
+    ]);
+
+    acf_add_options_sub_page([
+        'page_title' => __('Footer'),
+        'menu_title' => __('Footer'),
+        'parent_slug' => $site_settings['menu_slug']
+    ]);
+}
+
+/**
+* Add ACF Blocks to Gutenberg
+**/
+
+function my_acf_block_render_callback( $block, $content = '', $is_preview = false, $post_id = 0 ) {
+    $slug = str_replace('acf/', '', $block['name']);
+    $block = array_merge(['className' => ''], $block);
+    $block['post_id'] = $post_id;
+    $block['slug'] = $slug;
+    $block['classes'] = implode(' ', [$block['slug'], $block['className'], $block['align']]);
+    echo \App\template("blocks/${slug}", ['block' => $block]);
+}
+
+add_action('acf/init', function() {
+    if( function_exists('acf_register_block') ) {
+        // Look into views/blocks
+        $dir = new \DirectoryIterator(locate_template("views/blocks/"));
+        // Loop through found blocks
+        foreach ($dir as $fileinfo) {
+            if (!$fileinfo->isDot() && ($fileinfo->getExtension() == 'php')) {
+                $slug = str_replace('.blade.php', '', $fileinfo->getFilename());
+                // Get infos from file
+                $file_path = locate_template("views/blocks/${slug}.blade.php");
+                $file_headers = get_file_data($file_path, [
+                    'title' => 'Title',
+                    'description' => 'Description',
+                    'category' => 'Category',
+                    'icon' => 'Icon',
+                    'keywords' => 'Keywords',
+                ]);
+                if( empty($file_headers['title']) ) {
+                    die( _e('The Block "'. $slug .'" needs a title: ' . $file_path));
+                }
+                if( empty($file_headers['category']) ) {
+                    die( _e('The Block "'. $slug .'" needs a category: ' . $file_path));
+                }
+                // Register a new block
+                $datas = [
+                    'name' => $slug,
+                    'title' => $file_headers['title'],
+                    'description' => $file_headers['description'],
+                    'category' => $file_headers['category'],
+                    'icon' => $file_headers['icon'],
+                    'keywords' => explode(' ', $file_headers['keywords']),
+                    'render_callback'  => 'my_acf_block_render_callback',
+                    'supports' => [ 'align' => [ 'wide', 'full' ] ],
+                    'align' => 'full'
+                ];
+                acf_register_block($datas);
+            }
+        }
+    }
+});
+
+/* Custom Post Type: Locations */
+
+$location_labels = array(
+    'name' => _x('Locations', 'Locations'),
+    'singular_name' => _x('Location', 'Locations'),
+    'add_new' => _x('Add New', 'location'),
+    'add_new_item' => __('Add New Location'),
+    'edit_item' => __('Edit Location'),
+    'new_item' => __('New Location'),
+    'view_item' => __('View Location'),
+    'view_items' => __('View Locations'),
+    'search_items' => __('Search Locations'),
+    'not_found' => __('No Locations found'),
+    'not_found_in_trash' => __('Nothing found in Trash'),
+    'parent_item_colon' => '',
+    'featured_image' => __( 'Featured Image' ),
+    'set_featured_image' => __( 'Set Featured Image' ),
+    'remove_featured_image' => __( 'Remove Featured Image' ),
+    'use_featured_image' => __( 'Use as Featured Image' )
+);
+
+$location_args = array(
+    'labels' => $location_labels,
+    'menu_icon' => 'dashicons-book',
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'show_in_nav_menus' => true,
+    'show_in_admin_bar' => true,
+    // 'menu_position' => 4,
+    'public' => true,
+    'publicly_queryable' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'locations', 'with_front' => false),
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => true,
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'author', 'excerpt', 'thumbnail', 'revisions')
+);
+
+register_post_type('location', $location_args);
