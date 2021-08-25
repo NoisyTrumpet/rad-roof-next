@@ -1,105 +1,120 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# [Sage](https://roots.io/sage/)
+[![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
+[![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
+[![Build Status](https://img.shields.io/travis/roots/sage.svg?style=flat-square)](https://travis-ci.org/roots/sage)
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Sage is a WordPress starter theme with a modern development workflow.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## Features
 
-## 🚀 Quick start
+* Sass for stylesheets
+* Modern JavaScript
+* [Webpack](https://webpack.github.io/) for compiling assets, optimizing images, and concatenating and minifying files
+* [Browsersync](http://www.browsersync.io/) for synchronized browser testing
+* [Blade](https://laravel.com/docs/5.6/blade) as a templating engine
+* [Controller](https://github.com/soberwp/controller) for passing data to Blade templates
+* CSS framework (optional): [Bootstrap 4](https://getbootstrap.com/), [Bulma](https://bulma.io/), [Foundation](https://foundation.zurb.com/), [Tachyons](http://tachyons.io/), [Tailwind](https://tailwindcss.com/)
 
-1.  **Create a Gatsby site.**
+See a working example at [roots-example-project.com](https://roots-example-project.com/).
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+## Requirements
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+Make sure all dependencies have been installed before moving on:
 
-1.  **Start developing.**
+* [WordPress](https://wordpress.org/) >= 4.7
+* [PHP](https://secure.php.net/manual/en/install.php) >= 7.1.3 (with [`php-mbstring`](https://secure.php.net/manual/en/book.mbstring.php) enabled)
+* [Composer](https://getcomposer.org/download/)
+* [Node.js](http://nodejs.org/) >= 8.0.0
+* [Yarn](https://yarnpkg.com/en/docs/install)
 
-    Navigate into your new site’s directory and start it up.
+## Theme installation
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
 
-1.  **Open the source code and start editing!**
+```shell
+# @ app/themes/ or wp-content/themes/
+$ composer create-project roots/sage your-theme-name
+```
 
-    Your site is now running at `http://localhost:8000`!
+To install the latest development version of Sage, add `dev-master` to the end of the command:
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+```shell
+$ composer create-project roots/sage your-theme-name dev-master
+```
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+During theme installation you will have options to update `style.css` theme headers, select a CSS framework, and configure Browsersync.
 
-## 🚀 Quick start (Gatsby Cloud)
+## Theme structure
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+```shell
+themes/your-theme-name/   # → Root of your Sage based theme
+├── app/                  # → Theme PHP
+│   ├── Controllers/      # → Controller files
+│   ├── admin.php         # → Theme customizer setup
+│   ├── filters.php       # → Theme filters
+│   ├── helpers.php       # → Helper functions
+│   └── setup.php         # → Theme setup
+├── composer.json         # → Autoloading for `app/` files
+├── composer.lock         # → Composer lock file (never edit)
+├── dist/                 # → Built theme assets (never edit)
+├── node_modules/         # → Node.js packages (never edit)
+├── package.json          # → Node.js dependencies and scripts
+├── resources/            # → Theme assets and templates
+│   ├── assets/           # → Front-end assets
+│   │   ├── config.json   # → Settings for compiled assets
+│   │   ├── build/        # → Webpack and ESLint config
+│   │   ├── fonts/        # → Theme fonts
+│   │   ├── images/       # → Theme images
+│   │   ├── scripts/      # → Theme JS
+│   │   └── styles/       # → Theme stylesheets
+│   ├── functions.php     # → Composer autoloader, theme includes
+│   ├── index.php         # → Never manually edit
+│   ├── screenshot.png    # → Theme screenshot for WP admin
+│   ├── style.css         # → Theme meta information
+│   └── views/            # → Theme templates
+│       ├── layouts/      # → Base templates
+│       └── partials/     # → Partial templates
+└── vendor/               # → Composer packages (never edit)
+```
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
+## Theme setup
 
-## 🧐 What's inside?
+Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+## Theme development
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+* Run `yarn` from the theme directory to install dependencies
+* Update `resources/assets/config.json` settings:
+  * `devUrl` should reflect your local development hostname
+  * `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/sage` for non-[Bedrock](https://roots.io/bedrock/) installs)
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+### Build commands
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+* `yarn start` — Compile assets when file changes are made, start Browsersync session
+* `yarn build` — Compile and optimize the files in your assets directory
+* `yarn build:production` — Compile assets for production
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+## Documentation
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+* [Sage documentation](https://roots.io/sage/docs/)
+* [Controller documentation](https://github.com/soberwp/controller#usage)
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+## Contributing
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+## Sage sponsors
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+Help support our open-source development efforts by [becoming a patron](https://www.patreon.com/rootsdev).
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="200" height="150"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="200" height="150"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="itineris" width="200" height="150"></a> <a href="http://www.hbgdesignlab.se/"><img src="https://cdn.roots.io/app/uploads/helsingborgdesignlab.png" alt="Helsingborg Design LAB" with="200" height="150">
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+## Community
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+Keep track of development and community news.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+* Participate on the [Roots Discourse](https://discourse.roots.io/)
+* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
+* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
+* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
