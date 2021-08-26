@@ -1,6 +1,6 @@
 name: 'Flywheel SSH Deploy'
 on:
-  pull_request:
+  push:
     branches: [ master ]
 jobs:
   build:
@@ -20,4 +20,4 @@ jobs:
           REMOTE_HOST: ssh.getflywheel.com
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           ARGS: -rltgoDzvO --exclude .git --exclude .github
-          TARGET: /www/wp-content/themes/radiant-themes/
+          TARGET: /www/wp-content/themes/radiant-roofing/
