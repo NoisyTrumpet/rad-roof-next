@@ -1,0 +1,27 @@
+name: Flywheel SSH Deploy
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build
+
+      - uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          REMOTE_HOST: ssh.getflywheel.com
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          ARGS: -rltgoDzvO --exclude .git --exclude .github
+          TARGET: /www/wp-content/themes/radiant-themes/
