@@ -1,6 +1,6 @@
 name: 'Flywheel SSH Deploy'
 on:
-  pull_request:
+  push:
     branches: [ master ]
 jobs:
   build:
@@ -16,8 +16,8 @@ jobs:
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ssh.getflywheel.com
-          REMOTE_USER: ${{ secrets.SSH_USER }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
           ARGS: -rltgoDzvO --exclude .git --exclude .github
-          TARGET: /www/wp-content/themes/radiant-themes/
+          TARGET: /www/wp-content/themes/radiant-roofing/
