@@ -12,6 +12,8 @@ jobs:
 
       - name: Install
         uses: php-actions/composer@v6
+        with:
+          php_version: 7.1
 
       - name: Build
         run: yarn && yarn build:production
