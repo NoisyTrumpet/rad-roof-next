@@ -10,6 +10,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install
+        uses: php-actions/composer@v6
+
       - name: Build
         run: yarn && yarn build:production
 
