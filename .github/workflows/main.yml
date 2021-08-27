@@ -10,9 +10,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Build
+      - name: Install
         uses: php-actions/composer@v6
-        run: composer install && yarn && yarn build:production
+
+      - name: Build
+        run: yarn && yarn build:production
 
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.1.6
