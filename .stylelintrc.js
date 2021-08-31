@@ -3,6 +3,7 @@ module.exports = {
   'rules': {
     'no-empty-source': null,
     'string-quotes': 'double',
+    'indentation': null,
     'at-rule-no-unknown': [
       true,
       {
