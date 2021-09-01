@@ -12,14 +12,14 @@
         @hasoption('logo')
         <div class="logo d-flex p-2">
             <a class="brand" href="{{ home_url('/') }}">
-                <img src="@option('logo', 'url')" alt="{{ get_bloginfo('name', 'display') }}" />
+                <img src="@option('logo', 'url')" alt="{{ get_bloginfo('name', 'display') }}" width="149.32" height="70.55" />
             </a>
         </div>
         @endoption
         <div class="d-flex p-2">
             @posts
             <div class="flex mx-2">
-                <a class="text-secondary" href="@field('address_link')">@title</a>: <a class="text-dark" href="@field('phone_link')">@field('phone_number')</a>
+                <a class="text-secondary text-uppercase" href="@permalink">@title:</a> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')</a>
             </div>
             @endposts
         </div>
@@ -29,7 +29,7 @@
     </div>
     <div class="bg-primary w-100">
         <div class="container">
-            <nav class="navbar navbar-expand-lg text-secondary">
+            <nav class="navbar navbar-expand-lg text-uppercase">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

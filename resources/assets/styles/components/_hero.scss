@@ -1,0 +1,33 @@
+.hero {
+    .card-image-wrapper {
+        display: grid !important;
+        position: relative !important;
+        place-items: center;
+    }
+
+    .card-column {
+        display: grid !important;
+        place-items: center !important;
+    }
+
+    .card-grid {
+        display: inline-flex;
+    }
+
+    .card-item {
+        display: grid;
+        place-items: center;
+        padding: 0 10px;
+    }
+
+    .hero-card {
+        border-radius: 10px;
+        max-width: 100% !important;
+        width: 321px;
+
+        img {
+            border-radius: 5px;
+            max-width: 100% !important;
+        }
+    }
+}
