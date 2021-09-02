@@ -17,3 +17,142 @@
   @extend .btn !optional;
   @extend .btn-secondary !optional;
 }
+
+.formContainer {
+  height: fit-content;
+  margin: 4rem 0;
+
+  .formBg {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #ccae88;
+
+    .bgCol-left {
+      background-color: #ccae88;
+      height: 100%;
+
+      &::before {
+        background-color: #ccae88;
+        content: "";
+        height: 200px;
+        width: 50%;
+        position: absolute;
+        top: -6%;
+        transform: skewY(-5deg);
+      }
+
+      &::after {
+        background-color: #ccae88;
+        content: "";
+        height: 200px;
+        width: 50%;
+        position: absolute;
+        bottom: -6%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .bgCol-right {
+      background-color: #ccae88;
+      height: 100%;
+
+      &::before {
+        background-color: #ccae88;
+        content: "";
+        height: 200px;
+        width: 50%;
+        position: absolute;
+        top: -6%;
+        transform: skewY(5deg);
+      }
+
+      &::after {
+        background-color: #ccae88;
+        content: "";
+        height: 200px;
+        width: 50%;
+        position: absolute;
+        bottom: -6%;
+        transform: skewY(5deg);
+      }
+    }
+  }
+
+  .formBlock {
+    overflow-x: hidden;
+    width: 100%;
+    padding: 1rem 20vw;
+    height: 100%;
+    z-index: 5;
+
+    .formHeader {
+      h2 {
+        color: white;
+        font-size: 2.3em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+
+    input,
+    select {
+      max-width: 100% !important;
+    }
+
+    .firstName input,
+    .lastName input,
+    .email input,
+    .phoneNum input,
+    .city select,
+    .service select,
+    .message textarea,
+    button {
+      border-radius: 10px !important;
+    }
+
+    .firstName,
+    .lastName,
+    .email {
+      width: 100% !important;
+    }
+
+    .phoneNum,
+    .city,
+    .service {
+      width: 48% !important;
+    }
+
+    .message {
+      width: 48% !important;
+      margin-top: -164px !important;
+    }
+
+    .message textarea {
+      height: 200px !important;
+    }
+
+    .wpforms-submit-container,
+    .wpforms-recaptcha-container {
+      width: fit-content !important;
+      float: right !important;
+    }
+
+    button {
+      background-color: #2f372b !important;
+      color: #ccae88 !important;
+      padding: 0.5rem 2rem !important;
+      border: none !important;
+      text-transform: uppercase !important;
+      font-weight: 800;
+      letter-spacing: 1px !important;
+
+      &:hover {
+        background-color: white !important;
+        color: #2f372b !important;
+      }
+    }
+  }
+}
