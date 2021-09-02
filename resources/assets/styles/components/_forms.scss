@@ -20,27 +20,27 @@
 
 .formContainer {
   height: fit-content;
-  margin: 4rem 0;
+  // margin: 4rem 0;
 
   .formBg {
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: -2;
     background-color: #ccae88;
 
     .bgCol-left {
       background-color: #ccae88;
       height: 100%;
 
-      &::before {
-        background-color: #ccae88;
-        content: "";
-        height: 200px;
-        width: 50%;
-        position: absolute;
-        top: -6%;
-        transform: skewY(-5deg);
-      }
+      // &::before {
+      //   background-color: #ccae88;
+      //   content: "";
+      //   height: 200px;
+      //   width: 50%;
+      //   position: absolute;
+      //   top: -6%;
+      //   transform: skewY(-5deg);
+      // }
 
       &::after {
         background-color: #ccae88;
@@ -57,15 +57,15 @@
       background-color: #ccae88;
       height: 100%;
 
-      &::before {
-        background-color: #ccae88;
-        content: "";
-        height: 200px;
-        width: 50%;
-        position: absolute;
-        top: -6%;
-        transform: skewY(5deg);
-      }
+      // &::before {
+      //   background-color: #ccae88;
+      //   content: "";
+      //   height: 200px;
+      //   width: 50%;
+      //   position: absolute;
+      //   top: -6%;
+      //   transform: skewY(5deg);
+      // }
 
       &::after {
         background-color: #ccae88;
@@ -82,7 +82,7 @@
   .formBlock {
     overflow-x: hidden;
     width: 100%;
-    padding: 1rem 20vw;
+    padding: 6rem 15% 1rem 15%;
     height: 100%;
     z-index: 5;
 

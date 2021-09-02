@@ -1,0 +1,74 @@
+.locations {
+    margin-bottom: -1%;
+
+    .locationBg {
+        height: 85%;
+        width: 100%;
+        z-index: -1;
+
+        .bgCol-left {
+          height: 100%;
+          background-color: rgba(47, 55, 43, 0.6);
+
+          &::after {
+            background-color: #2f372b;
+            content: "";
+            height: 35%;
+            width: 50%;
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            transform: skewY(-5deg);
+          }
+        }
+
+        .bgCol-right {
+          height: 100%;
+          background-color: rgba(47, 55, 43, 0.6);
+
+          &::after {
+            background-color: #2f372b;
+            content: "";
+            height: 35%;
+            width: 50%;
+            position: absolute;
+            bottom: -10%;
+            right: 0;
+            transform: skewY(5deg);
+          }
+        }
+      }
+
+  .locationsBlock {
+    position: relative;
+    bottom: 15px;
+    z-index: 2;
+    padding-top: 5%;
+
+    h3 {
+        margin-bottom: 2rem !important;
+    }
+
+    p {
+        margin-bottom: 0.3rem !important;
+    }
+
+    .addressLink {
+        text-decoration: none;
+        color: white !important;
+
+        &:hover {
+            color: #ccae88 !important;
+        }
+    }
+
+    .phoneLink {
+        text-decoration: none;
+        color: #ccae88 !important;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+  }
+}
