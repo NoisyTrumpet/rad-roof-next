@@ -1,13 +1,9 @@
 {{--
-  Template Name: Commercial Page Template
-  Title: Commercial
+  Template Name: Commercial
 --}}
 
 @extends('layouts.app')
-
-<div class="container m-auto">
-    @include('partials.page-header')
-</div>
-
-
+@section('content')
+@include('partials.content-page')
+@include('blocks.photo-gallery')
 @endsection
