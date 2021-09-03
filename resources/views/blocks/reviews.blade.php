@@ -24,5 +24,4 @@ $customer = get_field('customer') ?: 'Customer...';
             <polygon points="959.33 0.39 1920 0.05 1920.31 200.62 959.33 0.39" style="fill: #2f372b" />
         </svg>
     </div>
-
 </div>

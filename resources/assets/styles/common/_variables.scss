@@ -15,12 +15,14 @@ $theme-colors: (primary: #2f372b,
 
 // Colors
 $primary: #2f372b;
+$secondary: #ccae88;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
-$font-family-sans-serif: "caecilia",
+$bs-font-sans-serif: "caecilia",
 sans-serif;
+$bs-font-mono: "Avenir LT Std";
 
 h1,
 h2,
@@ -28,5 +30,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-sans-serif;
+  font-family: $bs-font-sans-serif;
+}
+
+p,
+span,
+a {
+  font-family: $bs-font-mono;
 }
