@@ -20,7 +20,6 @@
 
 .formContainer {
   height: fit-content;
-  // margin: 4rem 0;
 
   .formBg {
     height: 100%;
@@ -31,16 +30,6 @@
     .bgCol-left {
       background-color: #ccae88;
       height: 100%;
-
-      // &::before {
-      //   background-color: #ccae88;
-      //   content: "";
-      //   height: 200px;
-      //   width: 50%;
-      //   position: absolute;
-      //   top: -6%;
-      //   transform: skewY(-5deg);
-      // }
 
       &::after {
         background-color: #ccae88;
@@ -56,16 +45,6 @@
     .bgCol-right {
       background-color: #ccae88;
       height: 100%;
-
-      // &::before {
-      //   background-color: #ccae88;
-      //   content: "";
-      //   height: 200px;
-      //   width: 50%;
-      //   position: absolute;
-      //   top: -6%;
-      //   transform: skewY(5deg);
-      // }
 
       &::after {
         background-color: #ccae88;
@@ -122,12 +101,20 @@
     .phoneNum,
     .city,
     .service {
-      width: 48% !important;
+      width: 48%;
+    }
+
+    .col-left {
+      float: left;
+    }
+
+    .col-right {
+      float: right;
     }
 
     .message {
-      width: 48% !important;
-      margin-top: -164px !important;
+      width: 48%;
+      margin-top: -250px;
     }
 
     .message textarea {
@@ -153,6 +140,35 @@
         background-color: white !important;
         color: #2f372b !important;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .formBlock {
+    padding: 6rem 10% 1rem 10% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .formBlock {
+    .phoneNum,
+    .city,
+    .service {
+      width: 100% !important;
+    }
+
+    .message {
+      width: 100% !important;
+      margin-top: 0 !important;
+    }
+
+    .col-left {
+      float: none !important;
+    }
+
+    .col-right {
+      float: none !important;
     }
   }
 }
