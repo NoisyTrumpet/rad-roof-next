@@ -5,5 +5,5 @@
 @extends('layouts.app')
 @section('content')
 @include('partials.content-page')
-@include('blocks.card-grid')
+@include('blocks.text')
 @endsection
