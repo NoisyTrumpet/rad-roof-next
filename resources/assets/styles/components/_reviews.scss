@@ -1,0 +1,37 @@
+.reviews {
+    .quotes {
+        z-index: 5;
+    }
+
+    .angle-wrapper {
+        height: fit-content;
+        width: 100%;
+        z-index: 2;
+
+        .bgCol-left {
+            &::after {
+              background-color: #2f372b;
+              content: "";
+              height: 100px;
+              width: 50%;
+              position: absolute;
+              top: 0%;
+              left: 0;
+              transform: skewY(-5deg);
+            }
+          }
+
+          .bgCol-right {
+            &::after {
+              background-color: #2f372b;
+              content: "";
+              height: 100px;
+              width: 50%;
+              position: absolute;
+              top: 0%;
+              right: 0;
+              transform: skewY(5deg);
+            }
+          }
+    }
+}

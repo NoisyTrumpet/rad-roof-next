@@ -1,3 +1,45 @@
-.wp-block-columns {
-    margin-bottom: 0 !important;
+footer {
+    height: fit-content;
+    min-height: 150px;
+    margin-top: 80px;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .wp-block-columns {
+        margin-bottom: 0 !important;
+    }
+
+    .bgLight {
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+
+        .bgCol-left {
+            &::before {
+              background-color: white;
+              content: "";
+              height: 80px;
+              width: 50%;
+              position: absolute;
+              bottom: 20%;
+              left: 0;
+              transform: skewY(-5deg);
+            }
+          }
+
+          .bgCol-right {
+            &::before {
+              background-color: white;
+              content: "";
+              height: 80px;
+              width: 50%;
+              position: absolute;
+              bottom: 20%;
+              right: 0;
+              transform: skewY(5deg);
+            }
+          }
+    }
 }
