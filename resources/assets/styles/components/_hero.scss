@@ -5,13 +5,18 @@
         place-items: center;
     }
 
+    .hero-title {
+        text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    }
+
     .card-column {
         display: grid !important;
         place-items: center !important;
     }
 
     .card-grid {
-        display: inline-flex;
+        display: flex;
+        justify-content: center;
     }
 
     .card-item {
@@ -22,12 +27,16 @@
 
     .hero-card {
         border-radius: 10px;
-        max-width: 100% !important;
-        width: 321px;
+        max-width: 321px !important;
 
-        img {
+        .card-image {
             border-radius: 5px;
-            max-width: 100% !important;
+            width: 100%;
+        }
+
+        .card-icon {
+            max-width: 100%;
+            width: 200px !important;
         }
     }
 }

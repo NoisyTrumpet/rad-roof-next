@@ -17,9 +17,19 @@
         </div>
         @endoption
         <div class="d-flex p-2">
+            {{-- @foreach($location as $location)
+            <div class="flex mx-2">
+                <a class="text-secondary text-uppercase" href="@permalink">@title:</a> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
+                </a>
+            </div>
+            @endforeach --}}
             @posts
             <div class="flex mx-2">
-                <a class="text-secondary text-uppercase" href="@permalink">@title:</a> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')</a>
+                <a class="text-secondary text-uppercase" href="@permalink">@title:</a> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
+                </a>
+                @if(get_the_title() != 'Austin')
+                <span class="fw-bold"> | </span>
+                @endif
             </div>
             @endposts
         </div>

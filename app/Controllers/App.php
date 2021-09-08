@@ -43,6 +43,7 @@ class App extends Controller
         'container_class'   => 'collapse navbar-collapse link-secondary justify-content-center',
         'container_id'      => 'navbarNavDropdown',
         'depth'             => 2,
+        'link_after'             => '<span class="fw-bold"> |</span>',
         );
         return $args;
     }

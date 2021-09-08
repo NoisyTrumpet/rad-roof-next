@@ -13,5 +13,17 @@
 @endphp
 
 <div id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
-  ... Form Block ...
+  <div class="position-relative formContainer">
+    <div class="d-flex position-absolute formBg">
+      <div class="w-100 bgCol-left"></div>
+      <div class="w-100 bgCol-right"></div>
+    </div>
+    <div class="formBlock">
+        <div class="text-center formHeader">
+          <h2>@field('title')</h2>
+          <p>@field('subtitle')</p>
+        </div>
+        @shortcode('[wpforms id="1463"]')
+    </div>
+  </div>
 </div>
