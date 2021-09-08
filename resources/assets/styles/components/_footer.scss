@@ -1,0 +1,18 @@
+.footer-top {
+    .footer-col-2 {
+        border-right: 1px solid #ccae88;
+        border-left: 1px solid #ccae88;
+    }
+}
+
+footer {
+    .wp-block-column {
+        text-align: center;
+        display: grid;
+        align-items: center;
+
+        img {
+            margin: 0 5px;
+        }
+    }
+}

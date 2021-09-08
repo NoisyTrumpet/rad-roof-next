@@ -1,0 +1,8 @@
+.grid-item {
+    display: grid;
+    place-items: center;
+
+    .logo-item {
+        max-width: 200px;
+    }
+}
