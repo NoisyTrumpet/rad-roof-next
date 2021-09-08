@@ -9,7 +9,7 @@
 @php
 $title = get_field('title') ?: 'Title...';
 $content = get_field('content') ?: 'Content...';
-$border = get_field('border') ?: 'Border...';
+$variants = get_field('variants') ?: 'Variants...';
 @endphp
 
 <div id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
@@ -20,7 +20,7 @@ $border = get_field('border') ?: 'Border...';
                     <div>
                         {!! $content !!}
                     </div>
-                    {{ $border }}
+                    <!-- {{ $variants }} -->
                 </div>
             </div>
     </div>

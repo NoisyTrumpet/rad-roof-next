@@ -42,8 +42,8 @@
         },
         {
             "key": "field_6138eec915789",
-            "label": "Border",
-            "name": "border",
+            "label": "Variants",
+            "name": "variants",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -54,11 +54,10 @@
                 "id": ""
             },
             "choices": {
-                "light: Light": "light: Light",
-                "dark: Dark": "dark: Dark",
-                "none: None": "none: None"
+                "Standard": "Standard",
+                "Underlined": "Underlined"
             },
-            "default_value": false,
+            "default_value": "Standard",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -84,5 +83,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631122509
+    "modified": 1631123180
 }
