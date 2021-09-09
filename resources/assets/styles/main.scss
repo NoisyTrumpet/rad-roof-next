@@ -25,10 +25,17 @@
 @import "layouts/tinymce";
 // Hero Styles:
 @import "components/hero";
-//Contact Styles:
+// Page Header Styles:
 @import "components/page-header";
-// Reviews Styles:
+// Locations Styles:
+@import "components/locations";
+// Logo Grid:
+@import "components/logo-grid";
+// Reviews:
 @import "components/reviews";
+// Card Grid
+@import "components/card-grid";
+// Footer:
+// @import "components/footer";
 // Fonts:
 @import "common/fonts";
-@import "components/locations";

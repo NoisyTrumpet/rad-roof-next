@@ -1,0 +1,33 @@
+.angle-wrapper {
+    height: 200px;
+    width: 100%;
+    z-index: -1;
+
+    .bgCol-left {
+      height: fit-content;
+
+      &::after {
+        background-color: #f0f0f0;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .bgCol-right {
+      height: fit-content;
+
+      &::after {
+        background-color: #f0f0f0;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(5deg);
+      }
+    }
+  }
