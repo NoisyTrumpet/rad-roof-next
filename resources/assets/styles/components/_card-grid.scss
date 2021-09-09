@@ -1,18 +1,5 @@
-.grid-item {
-  display: grid;
-  place-items: center;
-
-  .logo-item {
-    max-width: 200px;
-  }
-
-  .grey-scale {
-    filter: grayscale(100%);
-  }
-
-  .color {
-    filter: none;
-  }
+.card {
+  background-color: inherit;
 }
 
 .angle-wrapper {

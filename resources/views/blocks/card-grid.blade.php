@@ -11,14 +11,14 @@
 $title = get_field('title') ?: 'Title...';
 @endphp
 
-<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} bg-light">
+<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} postion-relative" style="background-color: @isfield('background_color', 'dark') #f0f0f0 !important @endfield @isfield('background_color', 'light') #fff !important @endfield; @isfield('has_angle', 'bottom')margin-bottom: 4rem;@endfield">
     <div class="container py-5">
         <h2 class="text-center mb-5">{!! $title !!}</h2>
         <div class="row">
             @hasfields('cards')
             @fields('cards')
             <div class="col-lg-4 col-md-6">
-                <div class="card bg-light" style="border: none;">
+                <div class="card @isfield('background_color', 'light') #fff !important @endfield; @isfield('background_color', 'dark') #f0f0f0 !important @endfield" style="border: none;">
                     <div class="card-img">
                         <img src="@sub('image', 'url')" alt="@sub('title')" style="max-width: 100%;">
                     </div>
@@ -32,4 +32,10 @@ $title = get_field('title') ?: 'Title...';
             @endhasfields
         </div>
     </div>
+    @isfield('has_angle', 'bottom')
+    <div class="angle-wrapper d-flex position-absolute">
+        <div class="w-100 bgCol-left"></div>
+        <div class="w-100 bgCol-right"></div>
+    </div>
+    @endfield
 </div>

@@ -1,3 +1,85 @@
-.wp-block-columns {
+.footer-bottom {
+  height: fit-content;
+  min-height: 90px;
+  margin-top: 80px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .wp-block-columns {
     margin-bottom: 0 !important;
+  }
+
+  .angles-wrapper {
+    height: 80px;
+    width: 100%;
+    z-index: -1;
+
+    .bgCol-left {
+      height: fit-content;
+
+      &::before {
+        background-color: #2f372b;
+        content: "";
+        height: 90px;
+        width: 50%;
+        position: absolute;
+        bottom: 50%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .bgCol-right {
+      height: fit-content;
+
+      &::before {
+        background-color: #2f372b;
+        content: "";
+        height: 90px;
+        width: 50%;
+        position: absolute;
+        bottom: 50%;
+        transform: skewY(5deg);
+      }
+    }
+  }
+}
+
+.footer-top {
+  margin-top: 2%;
+
+  .angles-wrapper {
+    height: 200px;
+    width: 100%;
+    z-index: -1;
+
+    .bgCol-left {
+      height: fit-content;
+
+      &::before {
+        background-color: #2f372b;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .bgCol-right {
+      height: fit-content;
+
+      &::before {
+        background-color: #2f372b;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(5deg);
+      }
+    }
+  }
 }
