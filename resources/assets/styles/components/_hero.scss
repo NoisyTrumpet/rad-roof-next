@@ -15,20 +15,53 @@
     }
 
     .card-grid {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        // grid-row-gap: 10px;
+        max-width: 100%;
+        position: relative;
     }
 
     .card-item {
         display: grid;
         place-items: center;
-        padding: 0 10px;
         max-width: 321px;
+        position: relative;
+
+        &:first-of-type {
+            margin-left: auto;
+        }
+
+        &:last-of-type {
+            margin-right: auto;
+
+            .card-body {
+                padding: 0.5rem 1.25rem;
+            }
+        }
     }
 
     .hero-card {
         border-radius: 10px;
-        max-width: 321px !important;
+        max-width: 100% !important;
+        text-decoration: none !important;
+        filter: drop-shadow(0 3px 40px rgba(0, 0, 0, 0.42));
+        position: relative;
+
+        &:hover {
+            background-color: $light !important;
+            transition: 0.3s;
+
+            .card-body {
+                p {
+                    transition: 0.3s;
+                    color: $primary !important;
+                    text-decoration: none !important;
+                }
+            }
+        }
 
         .card-image {
             border-radius: 5px;
@@ -37,7 +70,60 @@
 
         .card-icon {
             max-width: 100%;
-            width: 200px !important;
+            width: 75%;
         }
     }
+
+    // Mobile Styles:
+    @media (max-width: 374px) {
+        .card-item {
+            .card-body {
+                p {
+                    font-size: 0.75rem !important;
+                }
+            }
+
+            &:first-of-type {
+                .card-body {
+                    p {
+                        white-space: nowrap !important;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                .card-body {
+                    padding: 0.65rem 1.25rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 776px) {
+        .card-item {
+            .card-body {
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            &:last-of-type {
+                .card-body {
+                    padding: 0.65rem 1.25rem;
+                }
+            }
+        }
+    }
+
+    //   @include media-breakpoint-up(md) {
+    //     html {
+    //       font-size: 1.4rem;
+    //     }
+    //   }
+
+    //   @include media-breakpoint-up(lg) {
+    //     html {
+    //       font-size: 1.6rem;
+    //     }
+    //   }
 }

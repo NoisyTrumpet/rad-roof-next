@@ -10,6 +10,17 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 
+// import then needed Font Awesome functionality
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+// import the Facebook and Twitter icons
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+// add the imported icons to the library
+library.add(faBars);
+
+// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
+
 /** Populate Router instance with DOM routes */
 const routes = new Router({
   // All pages
@@ -22,3 +33,12 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+
+$(document).ready(function(){
+  // $('ul.sub-menu').parent().addClass('dropdown');
+  // $('ul.sub-menu').addClass('dropdown-menu');
+  // $('ul#menuid li.dropdown a').addClass('dropdown-toggle');
+  // $('ul.sub-menu li a').removeClass('dropdown-toggle');
+  const dropLink = $('a.dropdown-toggle').attr('data-href');
+  $('a.dropdown-toggle').attr('href', dropLink);
+});
