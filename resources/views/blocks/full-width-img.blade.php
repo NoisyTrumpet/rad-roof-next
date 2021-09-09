@@ -11,7 +11,7 @@
 $image = get_field('full_width_image') ?: 'Image...';
 @endphp
 
-<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} bg-light w-100">
+<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} bg-light w-100 mx-0 my-10 p-0">
     @hasfields('cards')
     @fields('cards')
         <div class="img-wrapper mx-auto">
