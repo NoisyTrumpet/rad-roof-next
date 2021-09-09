@@ -12,7 +12,7 @@ $content = get_field('content') ?: 'Content...';
 $variants = get_field('variants') ?: 'Variants...';
 @endphp
 
-<div id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
+<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} m-15 p-15">
     <div class="container-fluid">
             <div class="text-block-wrapper">
                 <div class="text-block">
