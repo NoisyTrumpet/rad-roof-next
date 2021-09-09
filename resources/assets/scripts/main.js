@@ -34,11 +34,7 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
 
-$(document).ready(function(){
-  // $('ul.sub-menu').parent().addClass('dropdown');
-  // $('ul.sub-menu').addClass('dropdown-menu');
-  // $('ul#menuid li.dropdown a').addClass('dropdown-toggle');
-  // $('ul.sub-menu li a').removeClass('dropdown-toggle');
-  const dropLink = $('a.dropdown-toggle').attr('data-href');
-  $('a.dropdown-toggle').attr('href', dropLink);
+// Drop Down Link:
+$('.dropdown').hover(function(){
+  $('.dropdown-toggle', this).trigger('click');
 });
