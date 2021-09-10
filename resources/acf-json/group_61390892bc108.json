@@ -15,7 +15,7 @@
                 "class": "full-width-img",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "array",
             "preview_size": "full",
             "library": "all",
             "min_width": "",
@@ -44,5 +44,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631198106
+    "modified": 1631307298
 }

@@ -219,3 +219,8 @@ $location_args = array(
 );
 
 register_post_type('location', $location_args);
+
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyDL0rXkvFzXE_d2pThn3vneE8oBlFEwRfw');
+}
+add_action('acf/init', 'my_acf_init');
