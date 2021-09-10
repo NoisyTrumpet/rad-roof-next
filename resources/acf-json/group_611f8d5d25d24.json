@@ -76,9 +76,12 @@
                 "id": ""
             },
             "choices": {
-                "primary": "Primary",
-                "dark": "Dark",
-                "light": "Light"
+                "white-left": "Light Left",
+                "primary-left": "Primary Left",
+                "secondary-left": "Secondary Left",
+                "white-right": "Light Right",
+                "primary-right": "Primary Right",
+                "secondary-right": "Secondary Right"
             },
             "default_value": "primary",
             "allow_null": 0,
@@ -106,5 +109,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629897898
+    "modified": 1631280358
 }

@@ -7,7 +7,7 @@
 --}}
 
 @php
-$title = get_field('title') ?: 'Title...';
+$title = get_field('title') ?: '';
 $content = get_field('content') ?: 'Content...';
 $image = get_field('image', 'url') ?: 'Image...';
 @endphp

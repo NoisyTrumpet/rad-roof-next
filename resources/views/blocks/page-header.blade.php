@@ -17,7 +17,24 @@
             <h1 class="display-5 fw-bold text-white shadow-md">@field('title')</h1>
         </div>
     </div>
-    <div class="gradientBar position-relative">
-        <div class="dualBars position-absolute"></div>
+    <div class="dualBars position-relative">
+        @isfield('divider', 'white-left')
+            <div class="white-left d-flex position-absolute"></div>
+        @endfield
+        @isfield('divider', 'primary-left')
+            <div class="primary-left d-flex position-absolute"></div>
+        @endfield
+        @isfield('divider', 'secondary-left')
+            <div class="secondary-left d-flex position-absolute"></div>
+        @endfield
+        @isfield('divider', 'white-right')
+            <div class="white-left d-flex position-absolute" style="transform: scaleX(-1);"></div>
+        @endfield
+        @isfield('divider', 'primary-right')
+            <div class="primary-left d-flex position-absolute" style="transform: scaleX(-1);"></div>
+        @endfield
+        @isfield('divider', 'secondary-right')
+            <div class="secondary-left d-flex position-absolute" style="transform: scaleX(-1);"></div>
+        @endfield
     </div>
 </div>
