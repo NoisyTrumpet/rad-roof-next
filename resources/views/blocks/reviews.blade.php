@@ -14,7 +14,7 @@ $customer = get_field('customer') ?: 'Customer...';
 @endphp
 
 <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} bg-primary pt-5 pb-2 position-relative">
-    <div class="container-fluidquote">
+    <div class="container-fluid quote">
         <p class="text-secondary text-center">"{{$quote}}"</p>
         <p class="text-secondary text-center fw-bold">- {{$customer}}</p>
     </div>

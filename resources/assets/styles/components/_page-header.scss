@@ -1,4 +1,4 @@
-.contactHero {
+.page-header {
   height: 450px;
   overflow-y: hidden;
 
@@ -8,21 +8,22 @@
   }
 
   .dualBars {
-    width: 100%;
-    height: 200px;
-
-    &::before {
-      background-color: rgba(255, 255, 255, 0.8);
-      height: 180px;
+    .white-left {
       width: 100%;
-      transform: skewY(2deg);
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 10%;
-    }
+      height: 200px;
 
-    &::after {
+      &::before {
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 180px;
+        width: 100%;
+        transform: skewY(2deg);
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+      }
+
+      &::after {
         background-color: rgba(255, 255, 255, 1);
         height: 110px;
         width: 100%;
@@ -32,6 +33,61 @@
         left: 0;
         bottom: 10%;
       }
+    }
+
+    .primary-left {
+      width: 100%;
+      height: 200px;
+
+      &::before {
+        background-color: rgba(47, 55, 43, 0.8);
+        height: 180px;
+        width: 100%;
+        transform: skewY(2deg);
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+      }
+
+      &::after {
+        background-color: rgba(255, 255, 255, 1);
+        height: 110px;
+        width: 100%;
+        transform: skewY(-2deg);
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+      }
+    }
+
+    .secondary-left {
+      width: 100%;
+      height: 200px;
+
+      &::before {
+        background-color: rgba(204, 175, 136, 0.8);
+        height: 180px;
+        width: 100%;
+        transform: skewY(2deg);
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+      }
+
+      &::after {
+        background-color: rgba(255, 255, 255, 1);
+        height: 110px;
+        width: 100%;
+        transform: skewY(-2deg);
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+      }
+    }
   }
 }
 
