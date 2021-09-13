@@ -45,3 +45,7 @@
 @import "components/map";
 // Fonts:
 @import "common/fonts";
+
+#eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > a {
+    display: none !important;
+}
