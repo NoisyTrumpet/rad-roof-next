@@ -1,7 +1,20 @@
 .footer-top {
+    .footer-col-1 {
+        img {
+            max-width: 200px;
+        }
+    }
+
     .footer-col-2 {
         border-right: 1px solid #ccae88;
         border-left: 1px solid #ccae88;
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3 {
+        display: grid !important;
+        place-items: center !important;
     }
 }
 
@@ -10,9 +23,17 @@ footer {
         text-align: center;
         display: grid;
         align-items: center;
+    }
 
-        img {
-            margin: 0 5px;
-        }
+    #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > a {
+        display: none !important;
+    }
+
+    #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > div.CommonLayout__ItemsContainer-d1flxf-0.ANSkS > div > div.LoadMoreButton__Container-sc-5z801y-0.kRNwud.GridLayout__StyledLoadMoreButton-sc-1onsl0h-1.dQgjRq {
+        display: none !important;
+    }
+
+    #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > div.CommonLayout__ItemsContainer-d1flxf-0.ANSkS > div > div.Grid__GridContainer-zyt552-0.dMzVXB > div > a > div.Classic__HeadingInfo-sc-19u56uy-2.gtQJhW > div.Classic__AuthorName-sc-19u56uy-4.dGLgMa {
+        text-align: left !important;
     }
 }
