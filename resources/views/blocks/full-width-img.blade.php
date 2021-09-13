@@ -12,11 +12,9 @@ $image = get_field('full_width_image') ?: 'Image...';
 @endphp
 
 <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} bg-light w-100 mx-0 my-10 p-0">
-    @hasfields('cards')
-    @fields('cards')
+    @hasfield('full_width_image')
         <div class="img-wrapper mx-auto">
-            <img src="@sub('image', 'url')" style="max-width: 100%;">
+            <img src="@field('full_width_image', 'url')" alt="@field('full_width_image', 'alt')" style="max-width: 100%;">
         </div>
-    @endfields
-    @endhasfields
+    @endfield
 </div>

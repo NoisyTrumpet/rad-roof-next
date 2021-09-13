@@ -13,6 +13,10 @@
                 </div>
             </div>
         </div>
+        <div class="angles-wrapper d-flex position-absolute">
+            <div class="w-100 bgCol-left"></div>
+            <div class="w-100 bgCol-right"></div>
+        </div>
     </div>
     <!-- <div class="bg-light">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 100" style="enable-background:new 0 0 1920 100;" xml:space="preserve">
@@ -25,10 +29,6 @@
     </svg>
 </div> -->
     <div class="footer-bottom bg-primary position-relative">
-        <div class="angles-wrapper d-flex position-absolute">
-            <div class="w-100 bgCol-left"></div>
-            <div class="w-100 bgCol-right"></div>
-        </div>
         <div class="container text-secondary mb-0 text-center py-4">
             @php dynamic_sidebar('sidebar-footer') @endphp
         </div>
