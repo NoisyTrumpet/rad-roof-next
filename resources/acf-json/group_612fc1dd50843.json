@@ -84,6 +84,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_613f9f0da0b5f",
+            "label": "Video",
+            "name": "video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_613f74e282670",
             "label": "Styles & Checks",
             "name": "",
@@ -99,31 +118,6 @@
             "open": 0,
             "multi_expand": 0,
             "endpoint": 0
-        },
-        {
-            "key": "field_613a5e70c1923",
-            "label": "Page Check",
-            "name": "page_check",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "home": "Home",
-                "other": "Other"
-            },
-            "default_value": "other",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
         },
         {
             "key": "field_613a605e48fc8",
@@ -201,6 +195,32 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_613f9f21a0b60",
+            "label": "Has Angle",
+            "name": "has_angle",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "top": "Angle Top",
+                "bottom": "Angle Bottom"
+            },
+            "default_value": "none",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -220,5 +240,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631550615
+    "modified": 1631561905
 }

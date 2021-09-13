@@ -1,0 +1,141 @@
+.text {
+    .border-standard {
+        border-bottom: none;
+    }
+
+    .border-underlined-primary {
+        border-bottom: 2px solid #2f372b;
+    }
+
+    .border-underlined-secondary {
+        border-bottom: 2px solid #ccaf88;
+    }
+
+    .text-color-none,
+    .text-color-light {
+        color: #000;
+    }
+
+    .text-color-primary,
+    .text-color-secondary {
+        color: #fff;
+    }
+
+  .text-angle-wrapper {
+    height: 200px;
+    width: 100%;
+    z-index: -1;
+
+    .white-bg-left {
+      height: fit-content;
+
+      &::after {
+        background-color: #fff;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .white-bg-right {
+      height: fit-content;
+
+      &::after {
+        background-color: #fff;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(5deg);
+      }
+    }
+
+    .light-bg-left {
+      height: fit-content;
+
+      &::after {
+        background-color: #f0f0f0;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .light-bg-right {
+      height: fit-content;
+
+      &::after {
+        background-color: #f0f0f0;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(5deg);
+      }
+    }
+
+    .primary-bg-left {
+      height: fit-content;
+
+      &::after {
+        background-color: #2f372b;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .primary-bg-right {
+      height: fit-content;
+
+      &::after {
+        background-color: #2f372b;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(5deg);
+      }
+    }
+
+    .secondary-bg-left {
+      height: fit-content;
+
+      &::after {
+        background-color: #ccaf88;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(-5deg);
+      }
+    }
+
+    .secondary-bg-right {
+      height: fit-content;
+
+      &::after {
+        background-color: #ccaf88;
+        content: "";
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        top: -30%;
+        transform: skewY(5deg);
+      }
+    }
+  }
+}

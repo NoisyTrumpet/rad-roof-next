@@ -25,19 +25,20 @@
             "key": "field_611fb85e06c7e",
             "label": "Location",
             "name": "location",
-            "type": "google_map",
-            "instructions": "",
-            "required": 1,
+            "type": "wysiwyg",
+            "instructions": "Add map embed code",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "center_lat": "29.474100499284773",
-            "center_lng": "-98.42195345307657",
-            "zoom": 11,
-            "height": ""
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 1,
+            "toolbar": "full",
+            "delay": 0
         }
     ],
     "location": [
@@ -57,5 +58,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631308038
+    "modified": 1631567001
 }

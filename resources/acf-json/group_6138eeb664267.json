@@ -98,8 +98,35 @@
             },
             "choices": {
                 "none": "None",
-                "angle-top": "Angle Top",
-                "angle-bottom": "Angle Bottom"
+                "top": "Angle Top",
+                "bottom": "Angle Bottom"
+            },
+            "default_value": "none",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_613f9bba7232f",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "light": "Light",
+                "primary": "Primary",
+                "secondary": "Secondary"
             },
             "default_value": "none",
             "allow_null": 0,
@@ -127,5 +154,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631551774
+    "modified": 1631559170
 }
