@@ -34,7 +34,3 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
 
-// Drop Down Link:
-$('.dropdown').hover(function(){
-  $('.dropdown-toggle', this).trigger('click');
-});
