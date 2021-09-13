@@ -17,7 +17,7 @@ $title = get_field('title') ?: 'Title...';
 
 <div id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
     <div class="position-relative text-center">
-        <h2 class="py-3 mb-0" style="background-color: @isfield('heading_background', 'primary') #ccae88 @endfield;">@field('title')</h2>
+        <h2 class="py-3 mb-0" style="background-color: @isfield('heading_background', 'primary') #ccae88;@endfield">@field('title')</h2>
         <div class="d-flex position-absolute locationBg" style="background-image: @hasfield('section_bg_image', 'url')url(@field('section_bg_image', 'url'))@endfield; background-size: cover; background-position: center;">
             <div class="w-100 bgCol-left"></div>
             <div class="w-100 bgCol-right"></div>

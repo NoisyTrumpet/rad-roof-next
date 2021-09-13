@@ -97,10 +97,10 @@
                 "id": ""
             },
             "choices": {
-                "light": "Light",
-                "dark": "Dark"
+                "none": "None",
+                "light": "Light"
             },
-            "default_value": "light",
+            "default_value": "none",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -125,7 +125,7 @@
                 "color": "Color",
                 "greyscale": "Greyscale"
             },
-            "default_value": false,
+            "default_value": "color",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -151,7 +151,7 @@
                 "top": "Top",
                 "bottom": "Bottom"
             },
-            "default_value": false,
+            "default_value": "none",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -177,5 +177,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631216787
+    "modified": 1631568748
 }

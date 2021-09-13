@@ -83,7 +83,7 @@
                 "primary-right": "Primary Right",
                 "secondary-right": "Secondary Right"
             },
-            "default_value": "primary",
+            "default_value": "white-left",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -109,5 +109,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631280358
+    "modified": 1631568779
 }
