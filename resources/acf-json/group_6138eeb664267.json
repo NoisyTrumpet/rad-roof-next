@@ -58,6 +58,33 @@
             "endpoint": 0
         },
         {
+            "key": "field_613f9bba7232f",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "light": "Light",
+                "primary": "Primary",
+                "secondary": "Secondary"
+            },
+            "default_value": "none",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6138eec915789",
             "label": "Variants",
             "name": "variants",
@@ -108,33 +135,6 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
-        },
-        {
-            "key": "field_613f9bba7232f",
-            "label": "Background Color",
-            "name": "background_color",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "none": "None",
-                "light": "Light",
-                "primary": "Primary",
-                "secondary": "Secondary"
-            },
-            "default_value": "none",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -154,5 +154,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631559170
+    "modified": 1631569640
 }

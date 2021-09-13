@@ -36,7 +36,7 @@
             },
             "default_value": "",
             "tabs": "text",
-            "media_upload": 1,
+            "media_upload": 0,
             "toolbar": "full",
             "delay": 0
         }
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631567001
+    "modified": 1631569475
 }
