@@ -25,13 +25,13 @@
 
       &::after {
         background-color: rgba(255, 255, 255, 1);
-        height: 110px;
+        height: 120px;
         width: 100%;
         transform: skewY(-2deg);
         content: "";
         position: absolute;
         left: 0;
-        bottom: 10%;
+        bottom: -1%;
       }
     }
 
@@ -52,13 +52,13 @@
 
       &::after {
         background-color: rgba(255, 255, 255, 1);
-        height: 110px;
+        height: 120px;
         width: 100%;
         transform: skewY(-2deg);
         content: "";
         position: absolute;
         left: 0;
-        bottom: 10%;
+        bottom: -1%;
       }
     }
 
@@ -79,13 +79,13 @@
 
       &::after {
         background-color: rgba(255, 255, 255, 1);
-        height: 110px;
+        height: 120px;
         width: 100%;
         transform: skewY(-2deg);
         content: "";
         position: absolute;
         left: 0;
-        bottom: 10%;
+        bottom: -1%;
       }
     }
   }

@@ -3,6 +3,25 @@
     "title": "RR Block: Text & Image",
     "fields": [
         {
+            "key": "field_613f73b41939e",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_612fc1f7a96fc",
             "label": "Title",
             "name": "title",
@@ -65,6 +84,23 @@
             "mime_types": ""
         },
         {
+            "key": "field_613f74e282670",
+            "label": "Styles & Checks",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_613a5e70c1923",
             "label": "Page Check",
             "name": "page_check",
@@ -78,10 +114,10 @@
                 "id": ""
             },
             "choices": {
-                "home": "Home Page",
+                "home": "Home",
                 "other": "Other"
             },
-            "default_value": false,
+            "default_value": "other",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -106,7 +142,59 @@
                 "right": "Right Side",
                 "left": "Left Side"
             },
-            "default_value": false,
+            "default_value": "right",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_613f74fd82671",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "light": "Light",
+                "primary": "Primary",
+                "secondary": "Secondary"
+            },
+            "default_value": "none",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_613f757b82672",
+            "label": "Font Size",
+            "name": "font_size",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "regular": "Regular",
+                "large": "Large"
+            },
+            "default_value": "regular",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -132,5 +220,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631215863
+    "modified": 1631550615
 }
