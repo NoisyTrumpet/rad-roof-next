@@ -3,7 +3,7 @@
     "title": "RR Block: Text & Image",
     "fields": [
         {
-            "key": "field_613f73b41939e",
+            "key": "field_613fcab10a131",
             "label": "Section Title",
             "name": "section_title",
             "type": "text",
@@ -84,7 +84,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_613f9f0da0b5f",
+            "key": "field_613fcad70a133",
             "label": "Video",
             "name": "video",
             "type": "file",
@@ -103,7 +103,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_613f74e282670",
+            "key": "field_613fc704ca923",
             "label": "Styles & Checks",
             "name": "",
             "type": "accordion",
@@ -145,8 +145,8 @@
             "placeholder": ""
         },
         {
-            "key": "field_613f74fd82671",
-            "label": "Background Color",
+            "key": "field_613fc720ca924",
+            "label": "Background_color",
             "name": "background_color",
             "type": "select",
             "instructions": "",
@@ -172,7 +172,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_613f757b82672",
+            "key": "field_613fc73aca925",
             "label": "Font Size",
             "name": "font_size",
             "type": "select",
@@ -186,7 +186,9 @@
             },
             "choices": {
                 "regular": "Regular",
-                "large": "Large"
+                "medium": "Medium",
+                "large": "Large",
+                "xlarge": "X-Large"
             },
             "default_value": "regular",
             "allow_null": 0,
@@ -197,7 +199,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_613f9f21a0b60",
+            "key": "field_613fc755ca926",
             "label": "Has Angle",
             "name": "has_angle",
             "type": "select",
@@ -240,5 +242,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631561905
+    "modified": 1631641340
 }

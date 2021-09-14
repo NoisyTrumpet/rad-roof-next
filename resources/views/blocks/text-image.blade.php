@@ -20,9 +20,9 @@ $image = get_field('image', 'url') ?: 'Image...';
         <div class="row position-relative justify-content-center" style="z-index: -3; background-color:@isfield('background_color', 'secondary') #ccaf88 !important @endfield @isfield('background_color', 'primary') #2f372b !important @endfield @isfield('background_color', 'light') #f0f0f0 !important @endfield @isfield('background_color', 'none') transparent !important @endfield; @isfield('image_side', 'left')flex-direction: row-reverse;@endfield">
             @isfield('has_angle', 'top')
             <div class="col-lg-6 order-lg-1 order-2 align-self-center py-1 mt-1 pt-lg-5 pb-lg-3 mt-lg-5" style="width: 100%; max-width: 800px;">
-                <div class="text-block">
+                <div class="text-block px-0 px-lg-4">
                     <h2>{{ $title }}</h2>
-                    <div>
+                    <div class="py-1 font-size-@field('font_size')">
                         {!! $content !!}
                     </div>
                 </div>
@@ -33,9 +33,9 @@ $image = get_field('image', 'url') ?: 'Image...';
             @endfield
             @isfield('has_angle', 'none')
             <div class="col-lg-6 order-1 align-self-center text-color-@field('background_color')" style="width: 100%; max-width: 800px;">
-                <div class="text-block px-0 px-lg-5">
+                <div class="text-block px-0 px-lg-4">
                     <h2>{{ $title }}</h2>
-                    <div class="@isfield('font_size', 'large')h3 @endfield py-5">
+                    <div class="py-1 font-size-@field('font_size')">
                         {!! $content !!}
                     </div>
                 </div>
@@ -60,6 +60,18 @@ $image = get_field('image', 'url') ?: 'Image...';
     .text-color-primary,
     .text-color-secondary {
         color: #fff;
+    }
+
+    .font-size-medium {
+        font-size: 1.25rem;
+    }
+
+    .font-size-large {
+        font-size: 1.45rem;
+    }
+
+    .font-size-xlarge {
+        font-size: 2rem;
     }
 
     @media (min-width: 768px) and (max-width: 1400px) {

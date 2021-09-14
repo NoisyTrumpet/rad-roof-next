@@ -25,14 +25,13 @@
     height: 100%;
     width: 100%;
     z-index: -2;
-    background-color: #ccae88;
 
     .bgCol-left {
-      background-color: #ccae88;
-      height: 100%;
+      height: fit-content;
+      background-color: inherit;
 
       &::after {
-        background-color: #ccae88;
+        background-color: inherit;
         content: "";
         height: 200px;
         width: 50%;
@@ -43,11 +42,11 @@
     }
 
     .bgCol-right {
-      background-color: #ccae88;
-      height: 100%;
+      height: fit-content;
+      background-color: inherit;
 
       &::after {
-        background-color: #ccae88;
+        background-color: inherit;
         content: "";
         height: 200px;
         width: 50%;
@@ -61,9 +60,17 @@
   .formBlock {
     overflow-x: hidden;
     width: 100%;
-    padding: 6rem 15% 1rem 15%;
+    padding: 3rem 15% 1rem 15%;
     height: 100%;
     z-index: 5;
+
+    .angle-none {
+      padding-top: 0;
+    }
+
+    .angle-top {
+      padding-top: 3rem;
+    }
 
     .formHeader {
       h2 {
@@ -141,12 +148,6 @@
         color: #2f372b !important;
       }
     }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .formBlock {
-    padding: 6rem 10% 1rem 10% !important;
   }
 }
 
