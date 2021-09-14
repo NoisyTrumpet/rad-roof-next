@@ -1,5 +1,7 @@
 @query([
-'post_type' => 'location'
+'post_type' => 'location',
+'order' => 'ASC',
+'orderby' => 'title',
 ])
 
 @hasoption('enabled')
@@ -42,13 +44,14 @@
     <div class="bg-primary w-100">
         <div>
             <nav class="navbar navbar-expand-lg text-uppercase align-items-center">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    @fa('bars', 'fas text-white h4 mb-0')
-                </button>
+
                 @hasoption('call_to_action')
                 <div class=" d-lg-none d-flex flex-column justify-content-center">
                     <a class="btn btn-secondary text-uppercase" href="@option('call_to_action', 'url')">@option('call_to_action', 'title')</a>
                 </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    @fa('bars', 'fas text-white fa-2x mb-0')
+                </button>
                 @endoption
                 @if (has_nav_menu('primary_navigation'))
                 {!! wp_nav_menu($primarymenu) !!}

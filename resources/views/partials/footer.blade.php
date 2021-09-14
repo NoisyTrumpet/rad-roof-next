@@ -5,7 +5,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 footer-col-1">
                     @php dynamic_sidebar('col-footer-1') @endphp
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 footer-col-2 my-3 my-md-0">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-col-2 my-5 my-md-0">
                     @php dynamic_sidebar('col-footer-2') @endphp
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 footer-col-3">

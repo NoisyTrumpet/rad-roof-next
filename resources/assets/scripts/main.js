@@ -33,3 +33,30 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+//  Add slideDown animation to Bootstrap dropdown when expanding.
+ $('.dropdown').on('show.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+});
+
+// Add slideUp animation to Bootstrap dropdown when collapsing.
+$('.dropdown').on('hide.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+});
+
+// Replace Link with data-href attribute
+const link = $('a[data-href]');
+
+// Replace the .dropdown-toggle .nav-link href attribute with the data-href attribute
+link.attr('href', link.attr('data-href'));
+
+
+
+
+jQuery(function($) {
+  if ($(window).width() > 769) {
+    // When clicking on the dropdown-toggle nav-link, navigate to the data-href attribute
+link.on('click', function() {
+  window.location.href = $(this).attr('data-href');
+});
+  }
+});
