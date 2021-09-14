@@ -13,7 +13,7 @@
   $i = 1;
 @endphp
 
-<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} position-relavtive py-3" style="background-color: @isfield('background_color', 'dark') #f0f0f0 !important @endfield @isfield('background_color', 'light') transparent !important @endfield; @isfield('has_angle', 'bottom')margin-bottom: 4rem;@endfield">
+<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} position-relavtive py-3" style="background-color: @isfield('background_color', 'light') #f0f0f0 !important @endfield @isfield('background_color', 'none') transparent !important @endfield; @isfield('has_angle', 'bottom')margin-bottom: 4rem;@endfield">
   <h3 class="text-center">@field('title')</h3>
   <div class="faq-accordion m-auto">
     @hasfields('questions')
