@@ -1,0 +1,76 @@
+.photo-gallery-carousel {
+    padding: 4rem;
+
+    @include media-breakpoint-up(lg) {
+        padding: 4rem 10rem;
+    }
+
+    .tns-outer {
+        position: relative;
+
+        .tns-nav {
+            display: none;
+        }
+
+        .tns-controls {
+            position: absolute;
+            top: 48%;
+            transform: translateY(-50%);
+            left: -4rem;
+            right: -4rem;
+
+            @include media-breakpoint-up(lg) {
+                left: -6rem;
+                right: -6rem;
+            }
+
+            button {
+                border: 0;
+                background: none;
+                color: theme-color("secondary");
+                font-size: 3rem;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 5rem;
+                }
+            }
+
+            button[data-controls="next"] {
+                float: right;
+            }
+        }
+    }
+}
+
+.photo-gallery-grid {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+
+    .col-6 {
+        padding-bottom: 30px;
+
+        img {
+            border: 1px solid theme-color("primary");
+        }
+    }
+}
+
+/* ADMIN */
+.wp-admin {
+  .photo-gallery-carousel {
+    padding: 4rem 0;
+
+    .slider {
+        display: flex;
+
+        a {
+            display: none;
+        }
+
+        a:nth-child(-n+3) {
+            display: block;
+            padding: 15px;
+        }
+    }
+  }
+}

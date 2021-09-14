@@ -2,7 +2,7 @@
 import 'jquery';
 
 // Import everything from autoload
-import './autoload/**/*'
+import './autoload/**/*';
 
 // import local dependencies
 import Router from './util/Router';
@@ -13,10 +13,10 @@ import aboutUs from './routes/about';
 // import then needed Font Awesome functionality
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 // import the Facebook and Twitter icons
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronLeft, faChevronRight, faTimes, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 // add the imported icons to the library
-library.add(faBars);
+library.add(faBars, faChevronLeft, faChevronRight, faTimes, faCircleNotch);
 
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();
@@ -33,4 +33,3 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
-

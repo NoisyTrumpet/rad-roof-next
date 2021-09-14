@@ -83,6 +83,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "bootstrap": "v4.3.1",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.7"
+    "lightbox2": "^2.11.3",
+    "popper.js": "^1.14.7",
+    "tiny-slider": "^2.9.3"
   }
 }
