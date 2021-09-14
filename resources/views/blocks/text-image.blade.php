@@ -33,7 +33,7 @@ $image = get_field('image', 'url') ?: 'Image...';
             @endfield
             @isfield('has_angle', 'none')
             <div class="col-lg-6 order-1 align-self-center text-color-@field('background_color')" style="width: 100%; max-width: 800px;">
-                <div class="text-block px-0 px-lg-4">
+                <div class="text-block px-0 px-lg-4 pt-0 pt-md-3">
                     <h2>{{ $title }}</h2>
                     <div class="py-1 font-size-@field('font_size')">
                         {!! $content !!}

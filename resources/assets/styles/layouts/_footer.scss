@@ -1,6 +1,11 @@
 footer {
   overflow: hidden;
 
+  .bg-light {
+    z-index: -3;
+    background-color: #f0f0f0;
+  }
+
   .footer-bottom {
     height: fit-content;
     min-height: 90px;
@@ -62,7 +67,7 @@ footer {
         height: fit-content;
 
         &::before {
-          background-color: white;
+          background-color: #f0f0f0;
           content: "";
           height: 120px;
           width: 50%;
@@ -76,7 +81,7 @@ footer {
         height: fit-content;
 
         &::before {
-          background-color: white;
+          background-color: #f0f0f0;
           content: "";
           height: 120px;
           width: 50%;
