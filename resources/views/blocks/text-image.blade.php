@@ -42,9 +42,10 @@ $image = get_field('image', 'url') ?: 'Image...';
                     <div class="col-lg-6 px-0 order-2 @isfield('image_side', 'left') text-right @endfield @isfield('image_side', 'right') text-left @endfield" style="z-index: -2; width: 100%; max-width: 800px;">
                         <img src="@field('image', 'url')" alt="@field('image', 'alt')" style="width: 100%;">
                     </div>
-                    @endfield
+
                 </div>
             </div>
+            @endfield
         </div>
         <style>
             .textFields {
