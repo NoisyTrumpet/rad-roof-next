@@ -86,11 +86,27 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .txMap {
-    display: none !important;
-  }
+  .locations {
+    .locationBg {
+      height: 90% !important;
 
-  .locationBg {
-    height: 90% !important;
+      .bgCol-left {
+        &::after {
+          height: 41%;
+        }
+      }
+
+      .bgCol-right {
+        &::after {
+          height: 41%;
+        }
+      }
+    }
+
+    .locationsBlock {
+      .txMap {
+        display: none !important;
+      }
+    }
   }
 }

@@ -2,6 +2,12 @@
   height: 450px;
   overflow-y: hidden;
 
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(3, 1, 1, 0.2);
+  }
+
   .container {
     height: 75%;
     z-index: 1;
