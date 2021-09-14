@@ -41,11 +41,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_6138d3bc55b18",
+            "key": "field_6139116445fca",
             "label": "Form Id",
             "name": "form_id",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "simply add form shortcode, or update id",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -58,6 +58,76 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_6140cdd7a6e31",
+            "label": "Styles",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6140cde6a6e32",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "light": "Light",
+                "primary": "Primary",
+                "secondary": "Secondary"
+            },
+            "default_value": "secondary",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6140cdf9a6e33",
+            "label": "Angle Adjustment",
+            "name": "angle_adjustment",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "top": "Angle Top",
+                "bottom": "Angle Bottom"
+            },
+            "default_value": "none",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -77,5 +147,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631114720
+    "modified": 1631638654
 }

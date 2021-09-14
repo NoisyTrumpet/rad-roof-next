@@ -50,3 +50,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  #block_613f6f4d82057 {
+    .grid-item:first-child {
+      .logo-item {
+        max-width: 220px !important;
+        width: 215px !important;
+      }
+    }
+  }
+}
