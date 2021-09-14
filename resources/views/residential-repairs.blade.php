@@ -1,5 +1,5 @@
 {{--
-    Template Name: Residential Page Template
+    Template Name: Residential Repairs Page Template
     @TODO:
     - Hero Component
     - About
