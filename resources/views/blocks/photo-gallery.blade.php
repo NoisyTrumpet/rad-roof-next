@@ -12,6 +12,7 @@
   $title = get_field('title');
   $photos = get_field('photos');
   $display = get_field('display');
+  $border = get_field('border');
 @endphp
 
 @if ($display === 'carousel')
@@ -24,7 +25,7 @@
       @hasfields('photos')
         @foreach( $photos as $image )
           <a href="{{ $image['url'] }}" data-lightbox="{{ $block['id'] }}">
-            <img src="{{ $image['sizes']['thumbnail-large'] }}" alt="{{ $image['alt'] }}" class="img-fluid" />
+            <img src="{{ $image['sizes']['thumbnail-large'] }}" alt="{{ $image['alt'] }}" class="img-fluid border-@field('border')" />
           </a>
         @endforeach
       @endhasfields
@@ -42,7 +43,7 @@
         @foreach( $photos as $image )
           <div class="col-6 col-md-4 col-lg-3">
             <a href="{{ $image['url'] }}" data-lightbox="{{ $block['id'] }}">
-              <img src="{{ $image['sizes']['thumbnail-large'] }}" alt="{{ $image['alt'] }}" class="img-fluid" />
+              <img src="{{ $image['sizes']['thumbnail-large'] }}" alt="{{ $image['alt'] }}" class="img-fluid border-@field('border')" />
             </a>
           </div>
         @endforeach
