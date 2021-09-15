@@ -1,6 +1,7 @@
 // Tiny Slider
 import { tns } from 'tiny-slider/src/tiny-slider';
 import 'lightbox2/src/js/lightbox';
+import 'bootstrap/js/dist/util';
 
 export default {
   init() {
