@@ -7,7 +7,9 @@
 --}}
 
 @query([
-'post_type' => 'location'
+'post_type' => 'location',
+'order' => 'ASC',
+'orderby' => 'title',
 ])
 
 @php
