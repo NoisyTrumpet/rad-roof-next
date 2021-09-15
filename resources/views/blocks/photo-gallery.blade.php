@@ -13,11 +13,12 @@
   $photos = get_field('photos');
   $display = get_field('display');
   $border = get_field('border');
+  $padding = get_field('padding');
 @endphp
 
 @if ($display === 'carousel')
 
-  <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} photo-gallery-carousel">
+  <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} photo-gallery-carousel py-@field('padding')">
     @hasfield('title')
       <h2 class="text-center mb-5">{!! $title !!}</h2>
     @endfield
@@ -41,7 +42,7 @@
     <div class="row">
       @hasfields('photos')
         @foreach( $photos as $image )
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="img-wrapper col-6 col-md-4 col-lg-3">
             <a href="{{ $image['url'] }}" data-lightbox="{{ $block['id'] }}">
               <img src="{{ $image['sizes']['thumbnail-large'] }}" alt="{{ $image['alt'] }}" class="img-fluid border-@field('border')" />
             </a>
