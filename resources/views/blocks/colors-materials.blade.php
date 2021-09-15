@@ -8,21 +8,62 @@
 
 @php
 $title = get_field('title') ?: 'Colors & Materials Title...';
+// Get first word of title and make it lowercase
+function getFirstWord($string) {
+$arr = explode(' ', trim($string));
+
+return isset($arr[0]) ? strtolower($arr[0]) : strtolower($string);
+}
 @endphp
 
-<div id="{{ $block['id']}}">
+<div id="{{ $block['id'] }}" class="bg-light pb-5">
     <div class="container-fluid bg-primary py-3">
-        <p class="text-white text-center mb-0 h3 serif-font">{{ $title }}</p>
+        <p class="text-white text-center mb-0 h3 serif-font">@field('title')</p>
     </div>
     <div class="container">
-        <ul class="nav nav-tabs" id="colors-tabs" role="tablist">
+        <nav>
+            <div class="nav nav-tabs justify-content-center mt-5 mb-3" id="nav-tab" role="tablist">
+                @fields('tabs')
+                @php $sub_title = get_sub_field_object('title', get_the_ID()); @endphp
+                <a class="nav-link text-uppercase @if (getFirstWord($sub_title['value']) === 'composition') active @endif" id="nav-{{ getFirstWord($sub_title['value']) }}-tab" data-toggle="tab" href="#nav-{{ getFirstWord($sub_title['value']) }}" role="tab" aria-controls="nav-{{ getFirstWord($sub_title['value']) }}" aria-selected="@if (getFirstWord($sub_title['value']) === 'composition')true @endif">@sub('title')</a>
+                @endfields
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
             @fields('tabs')
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="tab-">
-                    @sub('title')
-                </button>
-            </li>
+            @php $sub_title = get_sub_field_object('title', get_the_ID()); @endphp
+            <div class="tab-pane fade @if (getFirstWord($sub_title['value']) === 'composition') active show @endif" id="nav-{{ getFirstWord($sub_title['value']) }}" role="tabpanel" aria-labelledby="nav-{{ getFirstWord($sub_title['value']) }}-tab">
+                <div class="color-grid">
+                    <nav>
+                        <div class="nav" id="colors-nav-tab" role="tablist" aria-orientation="vertical">
+                            @fields('color_options')
+                            @php $sub_color = get_sub_field_object('color', get_the_ID());
+                            @endphp
+                            <a class="nav-link p-1" id="v-pills-@sub('color')-tab" data-toggle="pill" href="#v-pills-@sub('color')" role="tab" aria-controls="v-pills-@sub('color')" aria-selected="@if ($sub_color['value'] === 'tera-cotta')true @endif">
+                                <img src="@sub('color_background_image', 'url')" alt="@sub('color')" class="img-fluid">
+                            </a>
+                            @endfields
+                        </div>
+                    </nav>
+                    <div class="div2 tab-content" id="colors-tabContent">
+                        @fields('color_options')
+                        @php $sub_color = get_sub_field_object('color', get_the_ID()); @endphp
+                        <div class="image-grid tab-pane fade @if ($sub_color['value'] === 'tera-cotta') show active @endif" id="v-pills-@sub('color')" role="tabpanel" aria-labelledby="v-pills-@sub('color')-tab">
+                            @fields('images')
+                            @php $sub_image = get_sub_field_object('image', get_the_ID()); @endphp
+                            <img src="@sub('image', 'url')" alt="@sub('image', 'alt')" class="img-fluid">
+                            @endfields
+                        </div>
+                        @endfields
+
+                    </div>
+                </div>
+            </div>
             @endfields
-        </ul>
+        </div>
+    </div>
+    <div class="angle-wrapper d-flex position-absolute">
+        <div class="w-100 bgCol-left"></div>
+        <div class="w-100 bgCol-right"></div>
     </div>
 </div>
