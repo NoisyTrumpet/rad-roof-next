@@ -13,7 +13,9 @@ $title = get_field('title') ?: '';
 
 <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} postion-relative" style="background-color: @isfield('background_color', 'light') #f0f0f0 !important @endfield @isfield('background_color', 'none') transparent !important @endfield; @isfield('has_angle', 'bottom')margin-bottom: 4rem;@endfield">
     <div class="container py-5">
-        <h2 class="text-center mb-5" style="@isfield('has_angle', 'top')margin-top: 0rem;@endfield">{!! $title !!}</h2>
+        @hasfield('title')
+            <h2 class="text-center mb-5" style="@isfield('has_angle', 'top')margin-top: 0rem;@endfield">{!! $title !!}</h2>
+        @endfield
         <div class="row mx-auto" style="max-width: 900px;">
             @hasfields('images')
             @fields('images')
