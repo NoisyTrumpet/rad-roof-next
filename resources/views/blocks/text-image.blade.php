@@ -28,8 +28,15 @@ $image = get_field('image', 'url') ?: 'Image...';
                     </div>
                 </div>
                 <div class="col-lg-6 px-0 order-lg-2 order-1 @isfield('image_side', 'left') text-right @endfield @isfield('image_side', 'right') text-left @endfield" style="width: 100%; max-width: 800px; z-index: -2;">
-                    <img src="@field('image', 'url')" alt="@field('image', 'alt')" style="width: 100%;">
-                </div>
+                    @hasfield('image')
+                        <img src="@field('image', 'url')" alt="@field('image', 'alt')" style="width: 100%;">
+                    @endfield
+                    @hasfield('video')
+                        <video width="100%" height="auto" autoplay loop muted>
+                            <source src="@field('video')" type="video/mp4">
+                        </video>
+                    @endfield
+                    </div>
                 @endfield
                 @isfield('has_angle', 'none')
                 <div class="col-lg-6 order-1 align-self-center text-color-@field('background_color')" style="width: 100%; max-width: 800px;">
@@ -41,43 +48,16 @@ $image = get_field('image', 'url') ?: 'Image...';
                     </div>
                 </div>
                 <div class="col-lg-6 px-0 order-2 @isfield('image_side', 'left') text-right @endfield @isfield('image_side', 'right') text-left @endfield" style="z-index: -2; width: 100%; max-width: 800px;">
-                    <img src="@field('image', 'url')" alt="@field('image', 'alt')" style="width: 100%;">
+                    @hasfield('image')    
+                        <img src="@field('image', 'url')" alt="@field('image', 'alt')" style="width: 100%;">
+                    @endfield
+                    @hasfield('video')
+                        <video width="100%" height="auto" autoplay loop muted>
+                            <source src="@field('video')" type="video/mp4">
+                        </video>
+                    @endfield
                 </div>
                 @endfield
             </div>
         </div>
 </div>
-<style>
-    .textFields {
-        padding-top: 5%;
-    }
-
-    .text-color-none,
-    .text-color-light {
-        color: #000;
-    }
-
-    .text-color-primary,
-    .text-color-secondary {
-        color: #fff;
-    }
-
-    .font-size-medium {
-        font-size: 1.25rem;
-    }
-
-    .font-size-large {
-        font-size: 1.45rem;
-    }
-
-    .font-size-xlarge {
-        font-size: 2rem;
-    }
-
-    @media (min-width: 768px) and (max-width: 1400px) {
-        .textFields {
-            padding-top: 8%;
-        }
-    }
-
-</style>

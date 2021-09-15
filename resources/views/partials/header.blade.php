@@ -29,8 +29,8 @@
             <div class="flex flex-md-column flex-sm-column mx-2">
                 <p class="text-secondary text-uppercase d-inline-flex mb-0" href="@permalink">@title:</p> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
                 </a>
-                @if(get_the_title() != 'Austin')
-                <span class="fw-bold d-md-inline-flex d-none"> | </span>
+                @if(get_the_title() != 'San Antonio')
+                <span class="fw-bold d-md-inline-flex d-none pl-2"> | </span>
                 @endif
             </div>
             @endposts

@@ -40,3 +40,23 @@
         </div>
     </div>
 </div>
+<div class="position-relative" style="margin: 1% 0 -2%">
+    @isfield('divider', 'white-left')
+        <div class="white-bar-left d-flex position-absolute"></div>
+    @endfield
+    @isfield('divider', 'white-right')
+        <div class="white-bar-right d-flex position-absolute"></div>
+    @endfield
+    @isfield('divider', 'primary-left')
+        <div class="white-bar-left d-flex position-absolute"></div>
+    @endfield
+    @isfield('divider', 'primary-right')
+        <div class="white-bar-right d-flex position-absolute"></div>
+    @endfield
+    @isfield('divider', 'secondary-left')
+        <div class="white-bar-left d-flex position-absolute"></div>
+    @endfield
+    @isfield('divider', 'secondary-right')
+        <div class="white-bar-right d-flex position-absolute"></div>
+    @endfield
+</div>
