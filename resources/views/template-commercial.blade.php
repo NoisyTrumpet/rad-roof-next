@@ -7,4 +7,5 @@
 @include('partials.content-page')
 @include('block.page-header')
 @include('blocks.text')
+@include('blocks.photo-gallery')
 @endsection
