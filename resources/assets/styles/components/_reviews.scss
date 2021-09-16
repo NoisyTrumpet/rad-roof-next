@@ -1,4 +1,7 @@
 .reviews {
+  position: relative;
+  z-index: 1;
+
   .quotes {
     z-index: 5;
   }
