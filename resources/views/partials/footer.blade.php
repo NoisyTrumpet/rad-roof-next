@@ -1,5 +1,5 @@
 <footer class="content-info">
-    <div class="position-relative bg-light pt-5">
+    <div class="position-relative bg-light pt-5"></div>
         <div class="footer-top position-relative">
             <div class="container">
                 <div class="row">
@@ -14,15 +14,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="footer-bottom bg-primary position-relative">
             <div class="angles-wrapper d-flex position-absolute">
                 <div class="w-100 bgCol-left"></div>
                 <div class="w-100 bgCol-right"></div>
             </div>
-        </div>
-        <div class="footer-bottom bg-primary position-relative">
-            <div class="container text-secondary mb-0 text-center py-4">
+            <div class="container text-secondary mb-0 text-center py-4 position-relative bottom-widgets">
                 @php dynamic_sidebar('sidebar-footer') @endphp
             </div>
         </div>
-    </div>
 </footer>
