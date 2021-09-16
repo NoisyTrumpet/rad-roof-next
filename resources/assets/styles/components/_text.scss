@@ -35,9 +35,10 @@
         background-color: #fff;
         content: "";
         height: 120px;
-        width: 50%;
+        width: 51%;
         position: absolute;
         top: -30%;
+        left: 0;
         transform: skewY(-5deg);
       }
     }
@@ -49,9 +50,10 @@
         background-color: #fff;
         content: "";
         height: 120px;
-        width: 50%;
+        width: 51%;
         position: absolute;
         top: -30%;
+        right: 0;
         transform: skewY(5deg);
       }
     }
