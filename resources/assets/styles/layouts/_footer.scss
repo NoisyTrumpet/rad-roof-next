@@ -1,5 +1,5 @@
 footer {
-  overflow: hidden;
+  overflow-x: hidden;
 
   .bg-light {
     z-index: -3;
@@ -7,98 +7,98 @@ footer {
     height: 100px;
   }
 
-    .footer-top {
-      // margin-top: 3%;
-      z-index: 1;
-      background-color: #f0f0f0;
+  .footer-top {
+    // margin-top: 3%;
+    z-index: 1;
+    background-color: #f0f0f0;
 
-      .footer-col-1,
-      .footer-col-2,
-      .footer-col-3 {
-        display: grid !important;
-        place-items: center !important;
-        z-index: 2;
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3 {
+      display: grid !important;
+      place-items: center !important;
+      z-index: 2;
+    }
+
+    .footer-col-1 {
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .footer-col-2 {
+      #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > a {
+        display: none !important;
       }
 
-      .footer-col-1 {
-        img {
-          max-width: 200px;
-        }
+      #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > div.CommonLayout__ItemsContainer-d1flxf-0.ANSkS > div > div.LoadMoreButton__Container-sc-5z801y-0.kRNwud.GridLayout__StyledLoadMoreButton-sc-1onsl0h-1.dQgjRq {
+        display: none !important;
       }
 
-      .footer-col-2 {
-        #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > a {
-          display: none !important;
-        }
+      #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > div.CommonLayout__ItemsContainer-d1flxf-0.ANSkS > div > div.Grid__GridContainer-zyt552-0.dMzVXB > div > a > div.Classic__HeadingInfo-sc-19u56uy-2.gtQJhW > div.Classic__AuthorName-sc-19u56uy-4.dGLgMa {
+        text-align: left !important;
+      }
+    }
+  }
 
-        #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > div.CommonLayout__ItemsContainer-d1flxf-0.ANSkS > div > div.LoadMoreButton__Container-sc-5z801y-0.kRNwud.GridLayout__StyledLoadMoreButton-sc-1onsl0h-1.dQgjRq {
-          display: none !important;
-        }
+  .footer-bottom {
+    height: fit-content;
+    min-height: 90px;
+    padding-top: 80px;
+    z-index: 0;
 
-        #eapps-google-reviews-f2d68bf8-a518-4e24-8717-56b81fb0282f > div > div > div > div.CommonLayout__ItemsContainer-d1flxf-0.ANSkS > div > div.Grid__GridContainer-zyt552-0.dMzVXB > div > a > div.Classic__HeadingInfo-sc-19u56uy-2.gtQJhW > div.Classic__AuthorName-sc-19u56uy-4.dGLgMa {
-          text-align: left !important;
+    .bottom-widgets {
+      z-index: 10;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .wp-block-columns {
+        margin-bottom: 0 !important;
+
+        .wp-block-column {
+          text-align: center;
+          display: grid;
+          align-items: center;
         }
       }
     }
 
-    .footer-bottom {
-      height: fit-content;
-      min-height: 90px;
-      padding-top: 80px;
+    .angles-wrapper {
+      height: 200px;
+      width: 100%;
       z-index: 0;
 
-      .bottom-widgets {
-        z-index: 10;
+      .bgCol-left {
+        height: fit-content;
 
-        p {
-          margin-bottom: 0;
-        }
-
-        .wp-block-columns {
-          margin-bottom: 0 !important;
-
-          .wp-block-column {
-            text-align: center;
-            display: grid;
-            align-items: center;
-          }
+        &::before {
+          background-color: #f0f0f0;
+          content: "";
+          height: 120px;
+          width: 50%;
+          position: absolute;
+          top: -65%;
+          transform: skewY(-5deg);
         }
       }
 
-      .angles-wrapper {
-        height: 200px;
-        width: 100%;
-        z-index: 0;
+      .bgCol-right {
+        height: fit-content;
 
-        .bgCol-left {
-          height: fit-content;
-
-          &::before {
-            background-color: #f0f0f0;
-            content: "";
-            height: 120px;
-            width: 50%;
-            position: absolute;
-            top: -65%;
-            transform: skewY(-5deg);
-          }
-        }
-
-        .bgCol-right {
-          height: fit-content;
-
-          &::before {
-            background-color: #f0f0f0;
-            content: "";
-            height: 120px;
-            width: 50%;
-            position: absolute;
-            top: -65%;
-            transform: skewY(5deg);
-          }
+        &::before {
+          background-color: #f0f0f0;
+          content: "";
+          height: 120px;
+          width: 50%;
+          position: absolute;
+          top: -65%;
+          transform: skewY(5deg);
         }
       }
     }
+  }
 }
 
 @media screen and (min-width: 768px) {
