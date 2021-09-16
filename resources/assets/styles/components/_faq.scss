@@ -1,5 +1,3 @@
-@import url("https://static.fontawesome.com/css/fontawesome-app.css");
-
 .faq {
   .faq-accordion {
     max-width: 1140px;
@@ -17,24 +15,24 @@
           width: 100%;
           text-align: left;
 
-          // &::after {
-          //   content: "url('../../images/minus.svg')";
-          //   // background-image: ;
-          //   // background-size: 28px 28px;
-          //   // height: 28px;
-          //   // width: 28px;
-          //   float: right;
-          //   color: #ccae88;
-          // }
+          &::after {
+            content: url("/wp-content/themes/radiant-roofing/resources/assets/images/minus.svg");
+            // background:;
+            background-size: 28px 28px;
+            height: 28px;
+            width: 28px;
+            float: right;
+            color: #ccae88;
+          }
 
           &:hover {
             color: #ccae88;
           }
         }
 
-        // button[aria-expanded="false"]::after {
-        //   content: url("../../images/plus.svg");
-        // }
+        button[aria-expanded="false"]::after {
+          content: url("/wp-content/themes/radiant-roofing/resources/assets/images/plus.svg");
+        }
       }
     }
   }
