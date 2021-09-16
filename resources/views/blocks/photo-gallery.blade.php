@@ -35,7 +35,7 @@
 
 @else
 
-  <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} photo-gallery-grid container">
+  <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} photo-gallery-grid container py-@field('padding')">
     @hasfield('title')
       <h2 class="text-center mb-5">{!! $title !!}</h2>
     @endfield
