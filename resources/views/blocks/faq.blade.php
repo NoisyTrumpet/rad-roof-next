@@ -22,7 +22,7 @@
 		      <div class="question">
 		        <div class="quest-header" id="heading-@php echo $i;@endphp">
 		          <h5 class="my-1">
-		            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-@php echo $i;@endphp" aria-expanded="true" aria-controls="collapse-@php echo $i;@endphp">
+		            <button class="btn btn-link quest-toggle" data-toggle="collapse" data-target="#collapse-@php echo $i;@endphp" aria-expanded="false" aria-controls="collapse-@php echo $i;@endphp">
 		              @sub('question')
 		            </button>
 		          </h5>

@@ -40,7 +40,7 @@
         </div>
     </div>
 </div>
-<div class="position-relative" style="margin: 1% 0 -2%">
+<div class="position-relative bottom-bar">
     @isfield('divider', 'white-left')
         <div class="white-bar-left d-flex position-absolute"></div>
     @endfield
