@@ -40,23 +40,37 @@
         </div>
     </div>
 </div>
+@isfield('bottom_image_diagonal', 'yes')
 <div class="position-relative bottom-bar">
     @isfield('divider', 'white-left')
-    <div class="white-bar-left d-flex position-absolute"></div>
+    <div class="positon-relative bottom-left-bar">
+        <div class="white-bar-left d-flex position-absolute"></div>
+    </div>
     @endfield
     @isfield('divider', 'white-right')
-    <div class="white-bar-right d-flex position-absolute"></div>
+    <div class="positon-relative bottom-right-bar">
+        <div class="white-bar-right d-flex position-absolute"></div>
+    </div>
     @endfield
     @isfield('divider', 'primary-left')
-    <div class="white-bar-left d-flex position-absolute"></div>
+    <div class="positon-relative bottom-left-bar">
+        <div class="white-bar-left d-flex position-absolute"></div>
+    </div>
     @endfield
     @isfield('divider', 'primary-right')
-    <div class="white-bar-right d-flex position-absolute"></div>
+    <div class="positon-relative bottom-right-bar">
+        <div class="white-bar-right d-flex position-absolute"></div>
+    </div>
     @endfield
     @isfield('divider', 'secondary-left')
-    <div class="white-bar-left d-flex position-absolute"></div>
+    <div class="positon-relative bottom-left-bar">
+        <div class="white-bar-left d-flex position-absolute"></div>
+    </div>
     @endfield
     @isfield('divider', 'secondary-right')
-    <div class="white-bar-right d-flex position-absolute"></div>
+    <div class="positon-relative bottom-right-bar">
+        <div class="white-bar-right d-flex position-absolute"></div>
+    </div>
     @endfield
 </div>
+@endfield

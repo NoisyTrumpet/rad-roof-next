@@ -78,9 +78,10 @@ footer {
           background-color: #f0f0f0;
           content: "";
           height: 120px;
-          width: 50%;
+          width: 51%;
           position: absolute;
           top: -65%;
+          left: 0;
           transform: skewY(-5deg);
         }
       }
@@ -92,9 +93,10 @@ footer {
           background-color: #f0f0f0;
           content: "";
           height: 120px;
-          width: 50%;
+          width: 51%;
           position: absolute;
           top: -65%;
+          right: 0;
           transform: skewY(5deg);
         }
       }
