@@ -52,7 +52,7 @@
     border-radius: 10px;
     max-width: 100% !important;
     text-decoration: none !important;
-    filter: drop-shadow(0 3px 40px rgba(0, 0, 0, 0.42));
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.42));
     position: relative;
 
     .card-image-wrapper {
@@ -75,6 +75,7 @@
     &:hover {
       background-color: $light !important;
       transition: 0.3s;
+      filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.82));
 
       .card-image-wrapper {
         &::after {
@@ -133,7 +134,7 @@
 
       .card-image-wrapper {
         .card-icon {
-            bottom: 20px;
+          bottom: 20px;
         }
       }
     }

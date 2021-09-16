@@ -8,6 +8,10 @@
     background-color: rgba(3, 1, 1, 0.2);
   }
 
+  h1 {
+    text-shadow: 1px 1px 4px $dark;
+  }
+
   .container {
     height: 75%;
     z-index: 1;

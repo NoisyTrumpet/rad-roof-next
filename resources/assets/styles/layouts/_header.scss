@@ -1,11 +1,11 @@
 @media only screen and (min-width: 769px) {
-  .dropdown-submenu > .dropdown-menu {
+  .menu-item-has-children > .dropdown-menu {
     &:hover {
       display: block !important;
     }
 
-    top: 0 !important;
-    left: 100% !important;
+    top: 100% !important;
+    left: 0 !important;
     margin-top: -6px !important;
     margin-left: -1px !important;
     border-radius: 0 !important;
@@ -47,9 +47,5 @@ header {
     display: block;
     max-width: 142.75px !important;
     margin: 0 auto;
-  }
-
-  ul.nav li.dropdown:hover ul.dropdown-menu {
-    display: block;
   }
 }

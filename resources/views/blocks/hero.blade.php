@@ -15,7 +15,7 @@
                 @hasfields('cards')
                 @fields('cards')
                 <div class="card-item">
-                    <a href="@sub('link', 'url')" aria-label="@sub('title')" class="hero-card bg-secondary p-2 mx-auto shadow-lg bg-secondary rounded">
+                    <a href="@sub('link', 'url')" aria-label="@sub('title')" class="hero-card bg-secondary p-2 mx-auto bg-secondary rounded">
                         <div class="card-image-wrapper">
                             <img src="@sub('image', 'url')" alt="@sub('title')" class="card-image">
                             <img src="@sub('icon', 'url')" alt="@sub('title')" class="position-absolute top-50 start-50 translate-middle mw-50 card-icon">
