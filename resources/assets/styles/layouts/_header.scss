@@ -19,15 +19,15 @@
     position: relative !important;
   }
 
-  // .dropdown-submenu>a::after {
-  //   display: block;
-  //   content: "\f105";
-  //   font-family: "FontAwesome";
-  //   margin-top: -18px;
-  //   right: 15px;
-  //   position: absolute;
-  //   font-weight: 300;
-  // }
+  .dropdown-submenu > a::after {
+    display: block;
+    content: "\f105";
+    font-family: "FontAwesome", sans-serif;
+    margin-top: -18px;
+    right: 15px;
+    position: absolute;
+    font-weight: 300;
+  }
 }
 
 .banner .nav li {
