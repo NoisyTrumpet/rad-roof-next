@@ -14,66 +14,13 @@
   }
 
   .dualBars {
-    .white-left {
-      width: 100%;
-      height: 200px;
-
-      &::before {
-        background-color: rgba(255, 255, 255, 0.8);
-        height: 180px;
-        width: 100%;
-        transform: skewY(2deg);
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 10%;
-      }
-
-      &::after {
-        background-color: rgba(255, 255, 255, 1);
-        height: 120px;
-        width: 100%;
-        transform: skewY(-2deg);
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -1%;
-      }
-    }
-
-    .primary-left {
-      width: 100%;
-      height: 200px;
-
-      &::before {
-        background-color: rgba(47, 55, 43, 0.8);
-        height: 180px;
-        width: 100%;
-        transform: skewY(2deg);
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 10%;
-      }
-
-      &::after {
-        background-color: rgba(255, 255, 255, 1);
-        height: 120px;
-        width: 100%;
-        transform: skewY(-2deg);
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -1%;
-      }
-    }
-
+    .white-left,
+    .primary-left,
     .secondary-left {
       width: 100%;
       height: 200px;
 
       &::before {
-        background-color: rgba(204, 175, 136, 0.8);
         height: 180px;
         width: 100%;
         transform: skewY(2deg);
@@ -92,45 +39,100 @@
         position: absolute;
         left: 0;
         bottom: -1%;
+      }
+    }
+
+    .white-left {
+      &::before {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .primary-left {
+      &::before {
+        background-color: rgba(47, 55, 43, 0.8);
+      }
+    }
+
+    .secondary-left {
+      &::before {
+        background-color: rgba(204, 175, 136, 0.8);
       }
     }
   }
 }
 
 .bottom-bar {
-  margin: 1% 0 -2%;
+  margin: 2px 0 0;
+  z-index: 2;
+}
+
+.bottom-left-bar {
+  margin: -25px 0 0;
+}
+
+.bottom-right-bar {
+  margin: -2px 0 0;
 }
 
 .white-bar-left {
   background-color: rgba(255, 255, 255, 1);
-  height: 50px;
-  width: 100%;
+  height: 30px;
+  width: 50%;
   transform: skewY(-2deg);
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -8px;
+  right: 0;
+  bottom: -15px;
 }
 
 .white-bar-right {
   background-color: rgba(255, 255, 255, 1);
-  height: 50px;
-  width: 100%;
+  height: 40px;
+  width: 50%;
   transform: skewY(2deg);
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -8px;
+  right: 0;
+  bottom: -25px;
 }
 
 @media screen and (min-width: 1540px) {
-  .bottom-bar {
-    margin: 1% 0 0% !important;
+  .bottom-left-bar {
+    margin: -35px 0 0;
+  }
+
+  .bottom-right-bar {
+    margin: -6px 0 0;
+  }
+
+  .white-bar-left {
+    height: 35px;
+  }
+
+  .dualBars {
+    .white-left,
+    .primary-left,
+    .secondary-left {
+      &::before {
+        height: 180px;
+        bottom: 15% !important;
+      }
+
+      &::after {
+        height: 120px;
+        bottom: 4% !important;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 976px) {
   .contactHero {
     height: 350px !important;
+  }
+
+  .bottom-bar {
+    display: none;
   }
 }

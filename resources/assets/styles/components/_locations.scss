@@ -1,5 +1,9 @@
 .locations {
-  margin-bottom: 0%;
+  margin-bottom: -10px;
+
+  h2 {
+    z-index: 2;
+  }
 
   .locationBg {
     height: 85%;
