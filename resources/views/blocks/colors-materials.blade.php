@@ -48,10 +48,18 @@ return isset($arr[0]) ? strtolower($arr[0]) : strtolower($string);
                     <div class="div2 tab-content" id="colors-tabContent">
                         @fields('color_options')
                         @php $sub_color = get_sub_field_object('color', get_the_ID()); @endphp
-                        <div class="image-grid tab-pane fade @if ($sub_color['value'] === 'tera-cotta') show active @endif" id="v-pills-@sub('color')" role="tabpanel" aria-labelledby="v-pills-@sub('color')-tab">
+                        <div class="img-wrapper image-grid tab-pane fade @if ($sub_color['value'] === 'tera-cotta') show active @endif" id="v-pills-@sub('color')" role="tabpanel" aria-labelledby="v-pills-@sub('color')-tab">
                             @fields('images')
-                            @php $sub_image = get_sub_field_object('image', get_the_ID()); @endphp
-                            <img src="@sub('image', 'url')" alt="@sub('image', 'alt')" class="img-fluid">
+                            @php
+                            $sub_image = get_sub_field_object('image', get_the_ID());
+
+                            // Splice image array for first image
+                            $sub_image = array_splice($sub_image, 0, 1);
+
+                            @endphp
+                            <a href="@sub('image', 'url')" data-lightbox="{{ $block['id']}}">
+                                <img src="@sub('image', 'url')" alt="@sub('image', 'alt')" class="img-fluid">
+                            </a>
                             @endfields
                         </div>
                         @endfields
