@@ -18,6 +18,7 @@
 
 @if ($display === 'carousel')
 
+@isfield('has_angle' 'top')
   <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} photo-gallery-carousel py-@field('padding')">
     @hasfield('title')
       <h2 class="text-center mb-5">{!! $title !!}</h2>
@@ -32,9 +33,11 @@
       @endhasfields
     </div>
   </div>
+@endfield
 
 @else
 
+@isfield('has_angle' 'top')
   <div id="{{ $block['id'] }}" class="{{ $block['classes'] }} photo-gallery-grid container py-@field('padding')">
     @hasfield('title')
       <h2 class="text-center mb-5">{!! $title !!}</h2>
@@ -51,5 +54,6 @@
       @endhasfields
     </div>
   </div>
+@endfield
 
 @endif
