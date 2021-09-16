@@ -1,27 +1,25 @@
 .text {
-  margin-top: 4%;
+  .border-standard {
+    border-bottom: none;
+  }
 
-    .border-standard {
-        border-bottom: none;
-    }
+  .border-underlined-primary {
+    border-bottom: 2px solid #2f372b;
+  }
 
-    .border-underlined-primary {
-        border-bottom: 2px solid #2f372b;
-    }
+  .border-underlined-secondary {
+    border-bottom: 2px solid #ccaf88;
+  }
 
-    .border-underlined-secondary {
-        border-bottom: 2px solid #ccaf88;
-    }
+  .text-color-none,
+  .text-color-light {
+    color: #000;
+  }
 
-    .text-color-none,
-    .text-color-light {
-        color: #000;
-    }
-
-    .text-color-primary,
-    .text-color-secondary {
-        color: #fff;
-    }
+  .text-color-primary,
+  .text-color-secondary {
+    color: #fff;
+  }
 
   .text-angle-wrapper {
     height: 200px;
