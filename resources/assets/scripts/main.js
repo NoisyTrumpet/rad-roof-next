@@ -53,6 +53,7 @@ link.attr('href', link.attr('data-href'));
 
 
 
+
 jQuery(function($) {
   if ($(window).width() > 769) {
     // When clicking on the dropdown-toggle nav-link, navigate to the data-href attribute
@@ -60,4 +61,6 @@ link.on('click', function() {
   window.location.href = $(this).attr('data-href');
 });
   }
+// Add active and show classes to the .img-wrapper #v-pills-terra-cotta
+$('#v-pills-terra-cotta').addClass('active show');
 });
