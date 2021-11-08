@@ -8,7 +8,7 @@
 
 @query([
 'post_type' => 'location',
-'order' => 'ASC',
+'order' => 'DESC',
 'orderby' => 'title',
 ])
 
