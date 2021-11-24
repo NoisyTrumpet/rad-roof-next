@@ -5,7 +5,7 @@
 ])
 
 @hasoption('enabled')
-<div class="container-fluid text-center py-3 bg-secondary text-white text-uppercase">
+<div class="container-fluid text-center py-3 bg-secondary text-dark text-uppercase">
     @option('content')
 </div>
 @endoption
@@ -21,13 +21,13 @@
         <div class="d-md-flex d-block p-2 justify-content-center mx-auto text-center">
             {{-- @foreach($location as $location)
             <div class="flex mx-2">
-                <a class="text-secondary text-uppercase" href="@permalink">@title:</a> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
+                <a class="text-dark text-uppercase" href="@permalink">@title:</a> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
                 </a>
             </div>
             @endforeach --}}
             @posts
             <div class="flex flex-md-column flex-sm-column mx-2">
-                <p class="text-secondary text-uppercase d-inline-flex mb-0" href="@permalink">@title:</p> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
+                <p class="text-dark text-uppercase d-inline-flex mb-0" href="@permalink">@title:</p> <a class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
                 </a>
                 @if(get_the_title() != 'San Antonio')
                 <span class="fw-bold d-md-inline-flex d-none pl-2"> | </span>

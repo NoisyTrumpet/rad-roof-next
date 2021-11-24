@@ -7,7 +7,7 @@
 --}}
 
 
-<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} hero jumbotron jumbotron-fluid text-center mb-0" style="background-image: @hasfield('hero_image', 'url')url(@field('hero_image', 'url'))@endfield; background-size: cover; background-position: 0 75%;">
+<div id="{{ $block['id'] }}" class="{{ $block['classes'] }} hero jumbotron jumbotron-fluid text-center mb-0" style="background-image: @hasfield('hero_image', 'url')url(@field('hero_image', 'url'))@endfield; background-size: cover; background-position: 0 75%;background-color:#000">
     <div class="container">
         <div class="hero-content">
             <h1 class="text-white hero-title">@field('title')</h1>
@@ -21,7 +21,7 @@
                             <img src="@sub('icon', 'url')" alt="@sub('title')" class="position-absolute top-50 start-50 translate-middle mw-50 card-icon">
                         </div>
                         <div class="card-body">
-                            <p class="text-white mb-0 serif-font h5">@sub('title')</p>
+                            <p class="text-dark mb-0 serif-font h5">@sub('title')</p>
                         </div>
                     </a>
                 </div>
