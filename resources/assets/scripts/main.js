@@ -44,6 +44,9 @@ $('.dropdown').on('hide.bs.dropdown', function() {
   $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
 });
 
+// Remove WpForms buttn class:
+$('.wpforms-submit').removeClass('wpforms-submit');
+
 // Replace Link with data-href attribute
 const link = $('a[data-href]');
 
