@@ -137,18 +137,13 @@
     }
 
     button {
+      @extend .btn !optional;
+      @extend .btn-primary !optional;
+      @extend .text-uppercase !optional;
+
       background-color: #2f372b !important;
       color: #ccae88 !important;
-      padding: 0.5rem 2rem !important;
       border: none !important;
-      text-transform: uppercase !important;
-      font-weight: 800;
-      letter-spacing: 1px !important;
-
-      &:hover {
-        background-color: white !important;
-        color: #2f372b !important;
-      }
     }
   }
 }
