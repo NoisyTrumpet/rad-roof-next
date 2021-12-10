@@ -145,6 +145,93 @@
       color: #ccae88 !important;
       border: none !important;
     }
+
+    .careerForm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px 20px;
+      width: fit-content;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+
+      label {
+        width: 100%;
+        font-weight: 600;
+
+        .reqStar {
+          color: red;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          border-radius: 10px !important;
+          border: none;
+          padding: 5px;
+          margin-top: 5px;
+
+          &:focus-visible {
+            outline: none;
+          }
+        }
+      }
+
+      input[type="submit" i] {
+        background-color: #2f372b !important;
+        border: none;
+        border-radius: 10px;
+        padding: 8px 30px;
+        color: #ccae88;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+
+      .firstName {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .lastName {
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+
+      .eMail {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      .phoneNumber {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .cvResume {
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+
+      .goodFit {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      .careerSubmit {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+    }
+
+    .wpcf7-response-output {
+      border-color: #2f372b !important;
+      border-radius: 5px !important;
+    }
   }
 }
 
@@ -175,6 +262,21 @@
 
     .col-right {
       float: none !important;
+    }
+
+    .careerForm {
+      grid-template-columns: 1fr !important;
+
+      .firstName,
+      .lastName,
+      .eMail,
+      .phoneNumber,
+      .cvResume,
+      .goodFit,
+      .careerSubmit {
+        grid-column-start: 1 !important;
+        grid-column-end: 2 !important;
+      }
     }
   }
 }
