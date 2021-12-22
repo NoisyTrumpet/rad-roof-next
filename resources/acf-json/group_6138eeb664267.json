@@ -41,7 +41,7 @@
             "delay": 0
         },
         {
-            "key": "field_613f7ed03e5bc",
+            "key": "field_613fc6d1023d9",
             "label": "Styles",
             "name": "",
             "type": "accordion",
@@ -58,7 +58,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_613f9bba7232f",
+            "key": "field_613fc6b1bb4e7",
             "label": "Background Color",
             "name": "background_color",
             "type": "select",
@@ -85,6 +85,31 @@
             "placeholder": ""
         },
         {
+            "key": "field_61c3a665d6e64",
+            "label": "Align Title",
+            "name": "align_title",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center"
+            },
+            "default_value": "left",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6138eec915789",
             "label": "Variants",
             "name": "variants",
@@ -99,6 +124,7 @@
             },
             "choices": {
                 "standard": "Standard",
+                "construction": "Construction Standard",
                 "underlined-primary": "Underlined - Primary",
                 "underlined-secondary": "Underlined - Secondary"
             },
@@ -111,7 +137,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_613f7ede3e5bd",
+            "key": "field_613fc699bb4e6",
             "label": "Has Angle",
             "name": "has_angle",
             "type": "select",
@@ -154,5 +180,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631569640
+    "modified": 1640212115
 }
