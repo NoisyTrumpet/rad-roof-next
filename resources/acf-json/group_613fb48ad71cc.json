@@ -37,7 +37,7 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "row",
             "button_label": "",
             "sub_fields": [
                 {
@@ -75,7 +75,7 @@
                     "collapsed": "",
                     "min": 0,
                     "max": 10,
-                    "layout": "table",
+                    "layout": "row",
                     "button_label": "",
                     "sub_fields": [
                         {
@@ -169,21 +169,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "key": "field_61b24592e4832",
-            "label": "CTA",
-            "name": "cta",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         }
     ],
     "location": [
@@ -203,5 +188,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1639073193
+    "modified": 1640280256
 }
