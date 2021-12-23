@@ -43,23 +43,35 @@ return isset($arr[0]) ? strtolower($arr[0]) : strtolower($string);
         <div class="color-grid">
           <nav>
             <div class="nav" id="colors-nav-tab" role="tablist" aria-orientation="vertical">
+              @php $count = 1; @endphp
               @fields('color_options')
-              @php $sub_color = get_sub_field_object('color', get_the_ID());
+              @php 
+              $sub_color = get_sub_field_object('color', get_the_ID());
+              $color_slug = sanitize_title_with_dashes(get_sub_field('color'));
+              $colorImage = get_sub_field('color_background_image')['url'];
+              $fallbackImage = get_template_directory_uri() . '/assets/images/color-swatch-fallback.jpg';
+              $image = $colorImage ?: $fallbackImage;
               @endphp
-              <a class="nav-link p-1" id="v-pills-@sub('color')-tab" data-toggle="pill" href="#v-pills-@sub('color')"
-                role="tab" aria-controls="v-pills-@sub('color')"
-                aria-selected="@if ($sub_color['value'] === 'tera-cotta')true @endif">
-                <img src="@sub('color_background_image', 'url')" alt="@sub('color')" class="img-fluid">
+              <a class="nav-link p-1 @if ($count === 1)active @endif" id="v-pills-{{$color_slug}}-tab" data-toggle="pill" href="#v-pills-{{$color_slug}}"
+                role="tab" aria-controls="v-pills-{{$color_slug}}"
+                aria-selected="@if ($count === 1)true @endif">
+                <img src="{{$image}}" alt="@sub('color')" class="img-fluid">
               </a>
+              @php $count++; @endphp
               @endfields
             </div>
           </nav>
           <div class="div2 tab-content" id="colors-tabContent">
+            @php $count = 1; @endphp
             @fields('color_options')
-            @php $sub_color = get_sub_field_object('color', get_the_ID()); @endphp
+            @php 
+            $sub_color = get_sub_field_object('color', get_the_ID()); 
+            $color_slug = sanitize_title_with_dashes(get_sub_field('color'));
+            @endphp
             <div
-              class="img-wrapper image-grid tab-pane fade @if ($sub_color['value'] === 'tera-cotta') show active @endif"
-              id="v-pills-@sub('color')" role="tabpanel" aria-labelledby="v-pills-@sub('color')-tab">
+            class="img-wrapper image-grid tab-pane fade @if ($count === 1) show active @endif"
+            id="v-pills-{{$color_slug}}" role="tabpanel" aria-labelledby="v-pills-{{$color_slug}}-tab">
+              <h3>@php the_sub_field('color') @endphp</h3>
               @fields('images')
               @php
               $sub_image = get_sub_field_object('image', get_the_ID());
@@ -73,6 +85,7 @@ return isset($arr[0]) ? strtolower($arr[0]) : strtolower($string);
               </a>
               @endfields
             </div>
+            @php $count++; @endphp
             @endfields
 
           </div>
