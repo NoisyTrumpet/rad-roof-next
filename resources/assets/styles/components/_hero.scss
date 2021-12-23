@@ -18,10 +18,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    @media (max-width: 400px) {
+    @media (max-width: 520px) {
       grid-template-columns: repeat(1, 1fr);
       grid-row-gap: 20px;
-      justify-items: center;
     }
 
     grid-template-rows: 1fr;
@@ -38,18 +37,14 @@
 
     &:first-of-type {
       margin-left: auto;
-
-      @media (max-width: 400px) {
-        margin: auto;
-      }
     }
 
     &:last-of-type {
       margin-right: auto;
+    }
 
-      @media (max-width: 400px) {
-        margin: auto;
-      }
+    @media (max-width: 520px) {
+      margin: auto !important;
     }
   }
 
