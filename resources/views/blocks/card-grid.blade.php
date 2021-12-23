@@ -18,15 +18,17 @@ $title = get_field('title') ?: 'Title...';
             @hasfields('cards')
             @fields('cards')
             <div class="col-lg-4 col-md-6">
-                <div class="card" style="border: none;">
-                    <div class="card-img">
-                        <img src="@sub('image', 'url')" alt="@sub('title')" style="max-width: 100%;">
+                @if(get_sub_field('link'))<a href="@sub('link', 'url')">@endif
+                    <div class="card" style="border: none;">
+                        <div class="card-img">
+                            <img src="@sub('image', 'url')" alt="@sub('title')" style="max-width: 100%;">
+                        </div>
+                        <div class="card-body px-0">
+                            <p class="serif-font h5 mb-4">@sub('title')</p>
+                            <p>@sub('description')</p>
+                        </div>
                     </div>
-                    <div class="card-body px-0">
-                        <p class="serif-font h5 mb-4">@sub('title')</p>
-                        <p>@sub('description')</p>
-                    </div>
-                </div>
+                @if(get_sub_field('link'))</a>@endif
             </div>
             @endfields
             @endhasfields
