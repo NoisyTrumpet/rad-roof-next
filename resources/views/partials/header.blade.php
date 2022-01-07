@@ -1,7 +1,7 @@
 @query([
 'post_type' => 'location',
 'order' => 'DESC',
-'orderby' => 'title',
+'orderby' => 'date',
 ])
 
 @hasoption('enabled')
@@ -31,7 +31,7 @@
         <p class="text-dark text-uppercase d-inline-flex mb-0" href="@permalink">@title:</p> <a
           class="text-dark text-bold" href="@field('phone_link')">@field('phone_number')
         </a>
-        @if(get_the_title() != 'Austin')
+        @if(get_the_title() != 'Frisco')
         <span class="fw-bold d-md-inline-flex d-none pl-2"> | </span>
         @endif
       </div>

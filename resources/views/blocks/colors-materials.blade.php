@@ -9,6 +9,9 @@ Keywords: colors, materials, colors & materials, color, material
 @php
 $title = get_field('title') ?: 'Colors & Materials Title...';
 $cta = get_field('cta') ?: 'Colors & Materials CTA...';
+$cta2 = get_field('cta2') ?: 'Colors & Materials CTA2...';
+$cta3 = get_field('cta3') ?: 'Colors & Materials CTA3...';
+$cta4 = get_field('cta4') ?: 'Colors & Materials CTA4...';
 // Get first word of title and make it lowercase
 function getFirstWord($string) {
 $arr = explode(' ', trim($string));
@@ -45,15 +48,15 @@ return isset($arr[0]) ? strtolower($arr[0]) : strtolower($string);
             <div class="nav" id="colors-nav-tab" role="tablist" aria-orientation="vertical">
               @php $count = 1; @endphp
               @fields('color_options')
-              @php 
+              @php
               $sub_color = get_sub_field_object('color', get_the_ID());
               $color_slug = sanitize_title_with_dashes(get_sub_field('color'));
               $colorImage = get_sub_field('color_background_image')['url'];
               $fallbackImage = get_template_directory_uri() . '/assets/images/color-swatch-fallback.jpg';
               $image = $colorImage ?: $fallbackImage;
               @endphp
-              <a class="nav-link p-1 @if ($count === 1)active @endif" id="v-pills-{{$color_slug}}-tab" data-toggle="pill" href="#v-pills-{{$color_slug}}"
-                role="tab" aria-controls="v-pills-{{$color_slug}}"
+              <a class="nav-link p-1 @if ($count === 1)active @endif" id="v-pills-{{$color_slug}}-tab"
+                data-toggle="pill" href="#v-pills-{{$color_slug}}" role="tab" aria-controls="v-pills-{{$color_slug}}"
                 aria-selected="@if ($count === 1)true @endif">
                 <img src="{{$image}}" alt="@sub('color')" class="img-fluid">
               </a>
@@ -64,13 +67,12 @@ return isset($arr[0]) ? strtolower($arr[0]) : strtolower($string);
           <div class="div2 tab-content" id="colors-tabContent">
             @php $count = 1; @endphp
             @fields('color_options')
-            @php 
-            $sub_color = get_sub_field_object('color', get_the_ID()); 
+            @php
+            $sub_color = get_sub_field_object('color', get_the_ID());
             $color_slug = sanitize_title_with_dashes(get_sub_field('color'));
             @endphp
-            <div
-            class="img-wrapper image-grid tab-pane fade @if ($count === 1) show active @endif"
-            id="v-pills-{{$color_slug}}" role="tabpanel" aria-labelledby="v-pills-{{$color_slug}}-tab">
+            <div class="img-wrapper image-grid tab-pane fade @if ($count === 1) show active @endif"
+              id="v-pills-{{$color_slug}}" role="tabpanel" aria-labelledby="v-pills-{{$color_slug}}-tab">
               <h3>@php the_sub_field('color') @endphp</h3>
               @fields('images')
               @php
@@ -93,10 +95,32 @@ return isset($arr[0]) ? strtolower($arr[0]) : strtolower($string);
       </div>
       @endfields
     </div>
-    <div class="cta-wrapper text-center pt-5">
+    <div class="container text-center pt-5">
+      @hasfield('cta_title')
+      <p class="h5">
+        @field('cta_title')
+      </p>
+      @endfield
+    </div>
+    <div class="cta-wrapper text-center pt-3">
       @hasfield('cta')
       <a class="btn btn-primary text-uppercase" href="{{$cta['url']}}">
         {{$cta['title']}}
+      </a>
+      @endfield
+      @hasfield('cta2')
+      <a class="btn btn-primary text-uppercase" href="{{$cta2['url']}}">
+        {{$cta2['title']}}
+      </a>
+      @endfield
+      @hasfield('cta3')
+      <a class="btn btn-primary text-uppercase" href="{{$cta3['url']}}">
+        {{$cta3['title']}}
+      </a>
+      @endfield
+      @hasfield('cta4')
+      <a class="btn btn-primary text-uppercase" href="{{$cta4['url']}}">
+        {{$cta4['title']}}
       </a>
       @endfield
     </div>

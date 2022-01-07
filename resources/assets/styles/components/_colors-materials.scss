@@ -34,6 +34,12 @@
     }
   }
 
+  .cta-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
   .div2 {
     grid-area: 1 / 2 / 2 / 3;
 
