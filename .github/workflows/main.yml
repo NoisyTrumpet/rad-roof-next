@@ -1,7 +1,7 @@
-name: 'Flywheel SSH Deploy'
+name: "Flywheel SSH Deploy"
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 jobs:
   build:
     name: Build and Deploy
@@ -13,13 +13,13 @@ jobs:
       - name: Install
         uses: php-actions/composer@v6
         with:
-          php_version: 7.1
+          php_version: 7.4
 
       - name: Build
         run: yarn && yarn build:production
 
       - name: Deploy
-        uses: easingthemes/ssh-deploy@v2.1.6
+        uses: easingthemes/ssh-deploy@v2.2.11
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ssh.getflywheel.com
